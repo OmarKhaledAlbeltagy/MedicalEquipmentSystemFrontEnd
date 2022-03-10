@@ -1,0 +1,22 @@
+{
+  "background_color": "#ffffff",
+  "description": "bootstrap admin template",
+  "dir": "ltr",
+  "display": "minimal-ui",
+  "name": "amereport",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "amereport",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "assets/images/fav.ico"
+    },
+    {
+      "src": "images/121x73.png",
+      "type": "image/png",
+      "sizes": "121x73"
+    }
+  ]
+}

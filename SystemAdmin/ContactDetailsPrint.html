@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap admin template">
+    <meta name="author" content="">
+    
+    <title>Contact Details</title>
+    
+    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="../assets/images/fav.ico">
+    
+    <!-- Stylesheets -->
+     <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../global/css/bootstrap-extend.min.css">
+    <link rel="stylesheet" href="../assets/css/site.min.css">
+    
+    <!-- Plugins -->
+    <link rel="stylesheet" href="../global/vendor/animsition/animsition.css">
+    <link rel="stylesheet" href="../global/vendor/asscrollable/asScrollable.css">
+    <link rel="stylesheet" href="../global/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="../global/vendor/intro-js/introjs.css">
+    <link rel="stylesheet" href="../global/vendor/slidepanel/slidePanel.css">
+    <link rel="stylesheet" href="../global/vendor/flag-icon-css/flag-icon.css">
+        <link rel="stylesheet" href="../assets/examples/css/pages/invoice.css">
+    
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../global/fonts/web-icons/web-icons.min.css">
+    <link rel="stylesheet" href="../global/fonts/brand-icons/brand-icons.min.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+    <link rel="stylesheet" href="../global/fontawesome/css/all.min.css"/>
+    <!--[if lt IE 9]>
+    <script src="../global/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lt IE 10]>
+    <script src="../global/vendor/media-match/media.match.min.js"></script>
+    <script src="../global/vendor/respond/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Scripts -->
+    <script src="../global/vendor/breakpoints/breakpoints.js"></script>
+    <script>
+      Breakpoints();
+    </script>
+    
+<script type="module">
+   import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+   const el = document.createElement('pwa-update');
+   document.body.appendChild(el);
+</script>
+    
+
+  </head>
+  <body class="animsition page-invoice">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+ 
+
+    <!-- Page -->
+   
+
+
+      <div id="pg" class="page-content">
+        <!-- Panel -->
+        <div class="panel">
+          <div class="panel-body container-fluid">
+            <div class="row">
+              <div class="col-lg-3">
+                <h3 id="name"></h3>
+                <address>
+                  <span><i class="fas fa-map-marker-alt"></i> City: </span><span id="city"></span>
+                  <br>
+                  <span><i class="fas fa-map-marker-alt"></i> District: </span><span id="district"></span>
+                  <br>
+                  <span><i class="fas fa-map-marker-alt"></i> Address: </span><span id="address"></span>
+                  <br>
+                  <span><i class="fas fa-envelope-open-text"></i> E-mail: </span><span id="mail"></span>
+                  <br>
+                  <span><i class="fas fa-phone-alt"></i> Mobile Number: </span><span id="mobile"></span>
+                  <br>
+                  <span><i class="fas fa-phone-alt"></i> Land Line Number: </span><span id="land"></span>
+                  <br>
+                  <span><i class="fas fa-hospital" aria-hidden="true"></i> Account Affiliation: </span><span id="account"></span>
+                </address>
+              </div>
+          
+            </div>
+            <hr style="border-color: gray; border-style: dotted;">
+            <div class="page-invoice-table table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <colgroup>
+                    <col span="1" style="width: 10%;">
+                    <col span="1" style="width: 30%;">
+                    <col span="1" style="width: 60%;">
+                    </colgroup>
+                    <tr>
+                      <th class="text-center th" colspan="3"><i class="fas fa-trash delt"  style="cursor:pointer"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td  class="text-left d"> 
+                      <i class="fas fa-trash del"  style="cursor:pointer"></i>
+                    </td>
+                    <td class="text-left">
+                      Contact Type:
+                    </td>
+                    <td class="text-left" id="contacttype">
+               
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td  class="text-left d"> 
+                      <i class="fas fa-trash del"  style="cursor:pointer"></i>
+                    </td>
+                    <td class="text-left">
+                     Purchase Type:
+                    </td>
+                    <td class="text-left" id="purchasetype">
+                    
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td  class="text-left d"> 
+                      <i class="fas fa-trash del"  style="cursor:pointer"></i>
+                    </td>
+                    
+                  </tr>
+                   
+                </tbody>
+              </table>
+            </div>
+            <hr style="border-color: gray; border-style: dotted;">
+            
+            <div class="row">
+            <div class="page-invoice-table table-responsive col-6">
+              <table class="table table-hover">
+                <thead>
+                    <tr>
+                      <th class="text-center th"><i class="fas fa-trash delt"  style="cursor:pointer"></i></th>
+                    </tr>
+                  <tr>
+                    <th class="text-center">First Line Managers</th>
+                  </tr>
+                </thead>
+                <tbody id="first">
+                  
+                </tbody>
+              </table>
+            </div>
+
+
+            <div class="page-invoice-table table-responsive col-6">
+              <table class="table table-hover">
+                <thead>
+                    <tr>
+                      <th class="text-center th"><i class="fas fa-trash delt"  style="cursor:pointer"></i></th>
+                    </tr>
+                  <tr>
+                    <th class="text-center">Medical Representatives</th>
+                  </tr>
+                </thead>
+                <tbody id="medical">
+                  
+                </tbody>
+              </table>
+            </div>
+
+
+       
+
+
+          </div>
+
+          <hr style="border-color: gray; border-style: dotted;">
+            <div class="page-invoice-table table-responsive col-lg-12">
+              <table class="table table-hover">
+                <thead>
+                  <colgroup>
+                  
+                    <col span="1" style="width: 30%;">
+                    <col span="1" style="width: 70%;">
+                  </colgroup>
+                  <tr>
+                    <th colspan="2" class="text-center th"><i class="fas fa-trash delt"  style="cursor:pointer"></i></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                
+                    <td class="text-left">Medical Visits: </td><td class="text-left" id="medicalcount"></td>
+                  </tr>
+            
+                </tbody>
+                </table>
+                </div>
+                
+
+                <hr style="border-color: gray; border-style: dotted;">
+                    <div class="page-invoice-table table-responsive col-lg-12">
+                      <table class="table table-hover">
+                        <thead>
+                          <colgroup>
+                            <col span="1" style="width: 10%;">
+                            <col span="1" style="width: 30%;">
+                            <col span="1" style="width: 60%;">
+                          </colgroup>
+                          <tr>
+                            <th colspan="3" class="text-center th"><i class="fas fa-trash delt" style="cursor:pointer"></i></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="text-left d">
+                              <i class="fas fa-trash del" style="cursor:pointer"></i>
+                            </td>
+                            <td class="text-left">Relationship Note: </td>
+                            <td class="text-left" id="relationshipnote"></td>
+                          </tr>
+                          <tr>
+                            <td class="text-left d">
+                              <i class="fas fa-trash del" style="cursor:pointer"></i>
+                            </td>
+                            <td class="text-left">Payment Note: </td>
+                            <td class="text-left" id="paymentnote"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                      
+
+
+
+                  
+            
+
+            <div class="text-right">
+           
+              <button type="button" id="print" class="btn btn-animate btn-animate-side btn-primary btn-outline">
+                <span><i class="icon wb-print" aria-hidden="true"></i> Print</span>
+              </button>
+       
+            </div>
+          </div>
+        </div>
+        <!-- End Panel -->
+      </div>
+    
+    <!-- End Page -->
+
+
+
+    <!-- Core  -->
+    <script src="../global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+    <script src="../global/vendor/jquery/jquery.js"></script>
+    <script src="../global/vendor/popper-js/umd/popper.min.js"></script>
+    <script src="../global/vendor/bootstrap/bootstrap.js"></script>
+    <script src="../global/vendor/animsition/animsition.js"></script>
+    <script src="../global/vendor/mousewheel/jquery.mousewheel.js"></script>
+    <script src="../global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+    <script src="../global/vendor/asscrollable/jquery-asScrollable.js"></script>
+    <script src="../global/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+    
+    <!-- Plugins -->
+    <script src="../global/vendor/switchery/switchery.js"></script>
+    <script src="../global/vendor/intro-js/intro.js"></script>
+    <script src="../global/vendor/screenfull/screenfull.js"></script>
+    <script src="../global/vendor/slidepanel/jquery-slidePanel.js"></script>
+    
+    <!-- Scripts -->
+    <script src="../global/js/Component.js"></script>
+    <script src="../global/js/Plugin.js"></script>
+    <script src="../global/js/Base.js"></script>
+    <script src="../global/js/Config.js"></script>
+    <script src="../global/fontawesome/js/all.min.js"></script>
+    <script src="../assets/js/Section/Menubar.js"></script>
+    <script src="../assets/js/Section/GridMenu.js"></script>
+    <script src="../assets/js/Section/Sidebar.js"></script>
+    <script src="../assets/js/Section/PageAside.js"></script>
+    <script src="../assets/js/Plugin/menu.js"></script>
+    <script src="../global/js/config/colors.js"></script>
+    <script src="../assets/js/config/tour.js"></script>
+    <script>Config.set('assets', '../assets');</script>
+    
+    <!-- Page -->
+    <script src="../assets/js/Site.js"></script>
+    <script src="../global/js/Plugin/asscrollable.js"></script>
+    <script src="../global/js/Plugin/slidepanel.js"></script>
+    <script src="../global/js/Plugin/switchery.js"></script>
+      <script src="../global/jspdf.min.js"></script>
+    <script>
+      (function(document, window, $){
+        'use strict';
+    
+        var Site = window.Site;
+        $(document).ready(function(){
+          Site.run();
+
+                    //start layout            
+                    if (localStorage.getItem("userrole") !== "System Admin") {
+              window.open("../notauth.html", "_self")
+                }
+
+    
+             //end layout
+
+
+          var contactid = window.location.search.substring(1);
+
+          function formatTimeShow(h_24) {
+            var h = h_24 % 12;
+            return (h < 10 ? '0' : '') + h;
+          }
+          
+          $.ajax({
+            url:"http://localhost:53586/Contact/GetContactById/"+contactid,
+            success:function(res){
+             
+              if (res.bestTimeFrom == null) {
+                res.bestTimeFrom = "Best time for visit has not been set in the reporting system";
+            
+              }
+              else{
+                var timefrom = res.bestTimeFrom.substring(11,16);
+                var h = timefrom.substring(0,2);
+                var m = timefrom.substring(3);
+                if (h>11) {
+                  var newh = formatTimeShow(h);
+                res.bestTimeFrom = newh+":"+m+" PM";
+                }
+               else{
+                 res.bestTimeFrom = timefrom+" AM";
+               }
+              }
+              if (res.bestTimeTo == null) {
+                res.bestTimeTo = "Best time for visit has not been set in the reporting system";
+              }
+              else{
+               var timeto = res.bestTimeTo.substring(11,16);
+                var h = timeto.substring(0,2);
+          
+                var m = timeto.substring(3);
+    
+                if (h>11) {
+                  var newh = formatTimeShow(h);
+                res.bestTimeTo = newh+":"+m+" PM";
+                }
+               else{
+                 res.bestTimeTo = timeto+" AM";
+               }
+              }
+
+              if (res.relationshipNote == null) {
+                res.relationshipNote = "There is no relationship note";          
+              }
+              if (res.paymentNotes == null) {
+                res.paymentNotes = "There is no payment note";
+              }
+              if (res.firstLineNames.length === 0) {
+                res.firstLineNames = ["There is no first line managers assigned to this account"]
+              }
+              if (res.medicalNames.length === 0) {
+                res.medicalNames = ["There is no medical representatives assigned to this account"];
+              }
+          
+
+              if (res.email == null || res.email == "") {
+                $("#mail").prev().prev().remove();
+                $("#mail").prev().remove();
+                $("#mail").remove();
+              }
+              else{
+                $("#mail").append(res.email);
+              }
+
+              if (res.accountName == null || res.accountname == "") {
+                $("#account").prev().prev().remove();
+                $("#account").prev().remove();
+                $("#account").remove();
+              }
+              else
+              {
+                $("#account").append(res.accountName)
+              }
+
+              if (res.landLineNumber == null || res.landLineNumber == "") {
+                $("#land").prev().prev().remove();
+                $("#land").prev().remove();
+                $("#land").remove();
+              }
+
+              else{
+                $("#land").append(res.landLineNumber);
+              }
+
+              if (res.address == null || res.address == "") {
+                $("#address").prev().prev().remove();
+                $("#address").prev().remove();
+                $("#address").remove();
+              }
+
+              else{
+                $("#address").append(res.address);
+              }
+    
+              $("#name").append(res.contactName);
+              $("#city").append(res.cityName);
+              $("#district").append(res.districtName);
+              
+             
+              $("#mobile").append(res.mobileNumber);
+              $("#contacttype").append(res.contactTypeName);
+              $("#purchasetype").append(res.purchaseTypeName)
+          
+       
+
+
+              $.each(res.firstLineNames,function(){
+                $("#first").append('<tr class="text-center"><td>'+this+'</td></tr>')
+              })
+
+              $.each(res.medicalNames,function(){
+                $("#medical").append('<tr class="text-center"><td>'+this+'</td></tr>');
+              })
+
+        
+
+              $("#medicalcount").append(res.numberOfMedicalVisits)
+        
+              $("#relationshipnote").append(res.relationshipNote);
+              $("#paymentnote").append(res.paymentNotes);
+
+            }
+          })
+
+
+
+
+
+
+
+          $("#print").click(function(){
+            $("#print").addClass('d-none');
+            $(".d").addClass('d-none');
+            $('.th').parent().addClass('d-none');
+        
+            window.print();
+
+            var delay = 1; 
+         
+             setTimeout(function(){ $(".d").removeClass('d-none'); }, delay);
+             setTimeout(function(){ $("#print").removeClass('d-none'); }, delay);
+             setTimeout(function(){ $(".th").parent().removeClass('d-none'); }, delay);
+            
+          })
+
+       
+    
+
+
+          $(".d").click(function(){
+            $(this).parent().remove();
+
+          })
+
+          $('.delt').click(function(){
+            $(this).parent().parent().parent().parent().parent().remove();
+          })
+
+
+        });
+      })(document, window, jQuery);
+    </script>
+  </body>
+</html>

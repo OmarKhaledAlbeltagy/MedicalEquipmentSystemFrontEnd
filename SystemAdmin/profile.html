@@ -1,0 +1,1274 @@
+
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap admin template">
+    <meta name="author" content="">
+    
+    <title>User Profile</title>
+    
+    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="../assets/images/fav.ico">
+    
+    <!-- Stylesheets -->
+     <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../global/css/bootstrap-extend.min.css">
+    <link rel="stylesheet" href="../assets/css/site.min.css">
+    
+    <!-- Plugins -->
+    <link rel="stylesheet" href="../global/vendor/animsition/animsition.css">
+    <link rel="stylesheet" href="../global/vendor/asscrollable/asScrollable.css">
+    <link rel="stylesheet" href="../global/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="../global/vendor/intro-js/introjs.css">
+    <link rel="stylesheet" href="../global/vendor/slidepanel/slidePanel.css">
+    <link rel="stylesheet" href="../global/vendor/flag-icon-css/flag-icon.css">
+        <link rel="stylesheet" href="../assets/examples/css/pages/profile.css">
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../global/fonts/web-icons/web-icons.min.css">
+    <link rel="stylesheet" href="../global/fonts/brand-icons/brand-icons.min.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+    <link rel="stylesheet" href="../global/fontawesome/css/all.min.css">
+    <!--[if lt IE 9]>
+    <script src="../global/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lt IE 10]>
+    <script src="../global/vendor/media-match/media.match.min.js"></script>
+    <script src="../global/vendor/respond/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Scripts -->
+    <script src="../global/vendor/breakpoints/breakpoints.js"></script>
+    <script>
+      Breakpoints();
+    </script>
+    
+<script type="module">
+   import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+   const el = document.createElement('pwa-update');
+   document.body.appendChild(el);
+</script>
+    
+
+  </head>
+  <body class="animsition page-profile">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
+    
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggler hamburger hamburger-close navbar-toggler-left hided"
+          data-toggle="menubar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="hamburger-bar"></span>
+        </button>
+        <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-collapse"
+          data-toggle="collapse">
+          <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+        </button>
+        <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+          <img class="navbar-brand-logo" src="../assets/images/amelogo.png" title="AME">
+          
+        </div>
+    
+      </div>
+    
+      <div class="navbar-container container-fluid">
+        <!-- Navbar Collapse -->
+        <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+          <!-- Navbar Toolbar -->
+          <ul class="nav navbar-toolbar">
+            <li class="nav-item hidden-float" id="toggleMenubar">
+              <a class="nav-link" data-toggle="menubar" href="#" role="button">
+                <i class="icon hamburger hamburger-arrow-left">
+                  <span class="sr-only">Toggle menubar</span>
+                  <span class="hamburger-bar"></span>
+                </i>
+              </a>
+            </li>
+            <li class="nav-item hidden-sm-down" id="toggleFullscreen">
+              <a class="nav-link icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
+                <span class="sr-only">Toggle fullscreen</span>
+              </a>
+            </li>
+      
+          </ul>
+          <!-- End Navbar Toolbar -->
+    
+          <!-- Navbar Toolbar Right -->
+          <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right" style="padding-right: 100px;">
+            <li class="nav-item dropdown">
+              <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
+                  <p id="FullName"></p>
+              </a>
+              <div class="dropdown-menu" role="menu">
+             
+                <a class="dropdown-item" href="../SystemAdmin/Setting.html" id="sett" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> Settings</a>
+                <div class="dropdown-divider" role="presentation"></div>
+                <a class="dropdown-item logout" href="" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
+              </div>
+            </li>
+          </ul>
+          <!-- End Navbar Toolbar Right -->
+        </div>
+        <!-- End Navbar Collapse -->
+    
+
+      </div>
+    </nav>  
+    
+    <div class="site-menubar">
+      <div class="site-menubar-body">
+        <div>
+          <div>
+            <ul class="site-menu" data-plugin="menu">
+              <li class="site-menu-category">Menu</li>
+              <li class="dropdown site-menu-item">
+                <a data-toggle="dropdown" data-dropdown-toggle="false" href="../SystemAdmin/Home.html">
+                  <i class="site-menu-icon wb-layout" aria-hidden="true"></i>
+                  <span class="site-menu-title">Dashboard</span>
+    
+                </a>
+              </li>
+    
+              <li class="dropdown site-menu-item has-sub active">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-user-friends site-menu-icon wb-layout"></i>
+    
+                  <span class="site-menu-title">Users</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+                          <li class="site-menu-item active">
+                            <a class="animsition-link" href="../SystemAdmin/user-list.html">
+                              <span class="site-menu-title">Manage Users</span>
+                            </a>
+                          </li>
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/SystemAdminRegister.html">
+                              <span class="site-menu-title">Create System Admin</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/TopLineManagerRegister.html">
+                              <span class="site-menu-title">Create Top Manager</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/FirstLineManagerRegister.html">
+                              <span class="site-menu-title">Create First Line Manager</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/MedicalRegister.html">
+                              <span class="site-menu-title">Create Medical Representative</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/SalesRegister.html">
+                              <span class="site-menu-title">Create Sales Representative</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+    
+    
+              <li class="dropdown site-menu-item has-sub">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-exclamation site-menu-icon"></i>
+    
+                  <span class="site-menu-title">General</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/Brands.html">
+                              <span class="site-menu-title">Brands & Products</span>
+                            </a>
+                          </li>
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/Cities.html">
+                              <span class="site-menu-title">Cities & Districts</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/LayOut.html">
+                              <span class="site-menu-title">Layout</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+    
+    
+              <li class="dropdown site-menu-item has-sub">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-hospital site-menu-icon" aria-hidden="true"></i>
+    
+                  <span class="site-menu-title">Accounts</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/AccountsList.html">
+                              <span class="site-menu-title">Accounts Management</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/AccountsTypes.html">
+                              <span class="site-menu-title">Accounts Types</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+    
+              <li class="dropdown site-menu-item has-sub">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-user-md site-menu-icon" aria-hidden="true"></i>
+    
+                  <span class="site-menu-title">Contacts</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/ContactsList.html">
+                              <span class="site-menu-title">Contacts Management</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/ContactsTypes.html">
+                              <span class="site-menu-title">Contacts Types</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/SalesAids.html">
+                              <span class="site-menu-title">Sales Aids</span>
+                            </a>
+                          </li>
+    
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+    
+              <li class="dropdown site-menu-item has-sub">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-file site-menu-icon" aria-hidden="true"></i>
+    
+                  <span class="site-menu-title">Reports</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/Visits.html">
+                              <span class="site-menu-title">Visits Report</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/Kpis.html">
+                              <span class="site-menu-title">KPIs Report</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/CollectionReport.html">
+                              <span class="site-menu-title">Collection Report</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/BalanceReport.html">
+                              <span class="site-menu-title">Balance Report</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/WorkingDaysReport.html">
+                              <span class="site-menu-title">Working Days Report</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown site-menu-item has-sub">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-question site-menu-icon" aria-hidden="true"></i>
+    
+                  <span class="site-menu-title">Requests</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/CategoryRequests.html">
+                              <span class="site-menu-title">Category Change Requests</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/VisitsDeletingRequests.html">
+                              <span class="site-menu-title">Visits Deleting Requests</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+    
+              <li class="dropdown site-menu-item has-sub">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-cogs site-menu-icon" aria-hidden="true"></i>
+    
+                  <span class="site-menu-title">Options</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/SetWorkingDays.html">
+                              <span class="site-menu-title">Set Working Days</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/WorkingDays.html">
+                              <span class="site-menu-title">Edit Working Days</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/KpisSetting.html">
+                              <span class="site-menu-title">Properties Setting</span>
+                            </a>
+                          </li>
+    
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown site-menu-item">
+                <a data-toggle="dropdown" data-dropdown-toggle="false" href="../SystemAdmin/MakeTimeOffTerritory.html">
+                  <i class="site-menu-icon wb-layout" aria-hidden="true"></i>
+                  <span class="site-menu-title">Create Time Off Territory</span>
+                </a>
+              </li>
+            </ul>
+            </li>
+    
+          </div>
+    
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Page -->
+    <div class="page">
+      <div class="page-content container-fluid">
+        <div class="row">
+          <div class="col-lg-3">
+            <!-- Page Widget -->
+            <div class="card card-shadow text-center">
+              <div class="card-block" id="card">
+                <h4 class="profile-user"></h4>
+                <p class="profile-job"><i class="fas fa-user-circle"></i></p>
+                <p id="manager" class="d-none"><strong>Manager: </strong></p>
+                <p class="profile-city"><i class="icon icon-color wb-map" aria-hidden="true"></i> </p>
+                
+                <div class="profile-social">
+                    <a id="profile-email" target="_blank" class="text-action" >
+                      <i class="fas fa-envelope-open-text fa-3x" aria-hidden="true"></i>
+                    </a>
+                    <a id="profile-phone" class="text-action" target="_blank">
+                      <i class="fas fa-mobile-alt fa-3x" aria-hidden="true"></i>
+                    </a>
+                    <a id="profile-whatsapp" class="text-action" target="_blank">
+                      <i class="fab fa-whatsapp fa-3x" aria-hidden="true"></i>
+                    </a>
+                  </div>
+              </div>
+  
+            </div>
+            <!-- End Page Widget -->
+          </div>
+
+          <div class="col-lg-9" id="right">
+            <!-- Panel -->
+            <div class="panel is-collapse">
+              <div class="panel-heading">
+                <h3 class="panel-title">User Setting</h3>
+                <div class="panel-actions panel-actions-keep">
+                  <a class="panel-action icon wb-plus" data-toggle="panel-collapse" aria-hidden="true"></a>
+                </div>
+              </div>
+              <div class="panel-body">
+              
+                <form id="usersettingform" autocomplete="off">
+         
+                </form>
+            
+              </div>
+            </div>
+            <!-- End Panel -->
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Page -->
+
+   
+    
+
+
+  
+    
+
+    
+       
+   
+  
+      
+
+    
+  
+    
+        
+ 
+
+   
+    <!-- Core  -->
+    <script src="../global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+    <script src="../global/vendor/jquery/jquery.js"></script>
+    <script src="../global/vendor/popper-js/umd/popper.min.js"></script>
+    <script src="../global/vendor/bootstrap/bootstrap.js"></script>
+    <script src="../global/vendor/animsition/animsition.js"></script>
+    <script src="../global/vendor/mousewheel/jquery.mousewheel.js"></script>
+    <script src="../global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+    <script src="../global/vendor/asscrollable/jquery-asScrollable.js"></script>
+    <script src="../global/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+    
+    <!-- Plugins -->
+    <script src="../global/vendor/switchery/switchery.js"></script>
+    <script src="../global/vendor/intro-js/intro.js"></script>
+    <script src="../global/vendor/screenfull/screenfull.js"></script>
+    <script src="../global/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="../global/vendor/moment/moment.min.js"></script>
+     
+    <!-- Scripts -->
+    <script src="../global/js/Component.js"></script>
+    <script src="../global/js/Plugin.js"></script>
+    <script src="../global/js/Base.js"></script>
+    <script src="../global/js/Config.js"></script>
+    
+    <script src="../assets/js/Section/Menubar.js"></script>
+    <script src="../assets/js/Section/GridMenu.js"></script>
+    <script src="../assets/js/Section/Sidebar.js"></script>
+    <script src="../assets/js/Section/PageAside.js"></script>
+    <script src="../assets/js/Plugin/menu.js"></script>
+    <script src="../global/fontawesome/js/all.min.js"></script>
+    <script src="../global/js/config/colors.js"></script>
+    <script src="../assets/js/config/tour.js"></script>
+    <script>Config.set('assets', '../assets');</script>
+    
+    <!-- Page -->
+    <script src="../assets/js/Site.js"></script>
+    <script src="../global/js/Plugin/asscrollable.js"></script>
+    <script src="../global/js/Plugin/slidepanel.js"></script>
+    <script src="../global/js/Plugin/switchery.js"></script>
+    <script src="../global/js/Plugin/responsive-tabs.js"></script>
+    <script src="../global/js/Plugin/tabs.js"></script>
+    <script src="../global/js/Plugin/panel.js"></script>
+    
+    <script>
+      (function(document, window, $){
+        'use strict';
+    
+        var Site = window.Site;
+        $(document).ready(function(){
+          Site.run();
+
+                   //start layout            
+                   if (localStorage.getItem("userrole") !== "System Admin") {
+              window.open("../notauth.html", "_self")
+                }
+
+             $("#FullName").append(localStorage.getItem("userfullname") + ' <span><i class="icon wb-chevron-down-mini" aria-hidden="true"></i></span>');
+
+             $(".logout").click(function (e) {
+               e.preventDefault();
+               $.ajax({
+                 url: "http://localhost:53586/users/LogOut",
+                 success: function (res) {
+                   if (res == true) {
+                     window.localStorage.removeItem("userfullname");
+                      window.localStorage.removeItem("useremail");
+                      window.localStorage.removeItem("userid");
+                      window.localStorage.removeItem("userrole");
+                     window.open("../index.html", "_self")
+                   }
+                   else {
+                     window.open("../error.html", "_self")
+                   }
+                 }
+               })
+             })
+             //end layout
+
+
+          var profileId = window.location.search.substring(1);
+          $.ajax({
+            url:"http://localhost:53586/mutual/GetUserById/"+profileId,
+            success:function(res){
+              if (res.active == true) {
+                $(".card-block").append('<button id="disable" type="button" class="btn btn-danger">Disable</button>')
+              }
+              else
+              {
+                $(".card-block").append('<button id="enable" type="button" class="btn btn-success">Enable</button>')
+              }
+              if (res.cityName == null) {
+                $(".profile-city").append('Saudi Arabia');
+              }
+              else
+              {
+                $(".profile-city").append(res.cityName);
+              }
+              $(".profile-user").append(res.fullName);
+              $(".profile-job").append(res.roleName);
+              $("#profile-email").attr("href","mailto:"+res.email);
+              $("#profile-phone").attr("href","tel:"+res.phoneNumber);
+              $("#profile-whatsapp").attr("href","https://wa.me/"+res.phoneNumber);
+
+              
+
+              switch (res.roleName){
+                case "System Admin":
+                $("#usersettingform").append('<div class="form-group"> <label class="form-control-label">Full Name</label> <input value="'+res.fullName+'" type="text" id="form-name" class="form-control" name="username" placeholder="John Fish" required=""> </div> <div class="form-group"> <label class="form-control-label">Email</label> <input value="'+res.email+'" id="form-email" type="email" class="form-control" name="email" placeholder="email@email.com" required=""> </div> <div class="form-group"> <label class="col-xl-2 col-md-3 form-control-label">Phone Number </label> <input value="'+res.phoneNumber+'" id="form-phone" type="text" class="form-control" name="birthday" placeholder="Must Begin With 00966" required="" /> </div> <div class="form-group" align="center"> <button type="submit" class="btn btn-primary" id="submitsystem">Submit Edits</button> </div>');
+                
+                break;
+
+                case "HR":
+                $("#usersettingform").append('<div class="form-group"> <label class="form-control-label">Full Name</label> <input value="'+res.fullName+'" type="text" id="form-name" class="form-control" name="username" placeholder="John Fish" required=""> </div> <div class="form-group"> <label class="form-control-label">Email</label> <input value="'+res.email+'" id="form-email" type="email" class="form-control" name="email" placeholder="email@email.com" required=""> </div> <div class="form-group"> <label class="col-xl-2 col-md-3 form-control-label">Phone Number </label> <input value="'+res.phoneNumber+'" id="form-phone" type="text" class="form-control" name="birthday" placeholder="Must Begin With 00966" required="" /> </div> <div class="form-group" align="center"> <button type="submit" class="btn btn-primary" id="submitsystem">Submit Edits</button> </div>');
+                
+                break;
+
+
+                case "Top Line Manager":
+                $("#usersettingform").append('<div class="form-group"> <label class="form-control-label">Full Name </label> <input value="'+res.fullName+'" type="text" id="form-name" class="form-control" name="username" placeholder="John Fish" required=""> </div> <div class="form-group"> <label class="form-control-label">Email </label> <input value="'+res.email+'" id="form-email" type="email" class="form-control" name="email" placeholder="email@email.com" required=""> </div> <div class="form-group"> <label class="form-control-label">Phone Number </label> <input value="'+res.phoneNumber+'" id="form-phone" type="text" class="form-control" name="birthday" placeholder="Must Begin With 00966" required="" /> </div> <div class="form-group"> <button type="submit" class="btn btn-primary" id="submittop">Submit Edits</button> </div>');
+                break;
+
+
+                case "First Line Manager":
+                $("#usersettingform").append('<div class="form-group"> <label class="form-control-label">Full Name </label> <input value="'+res.fullName+'" type="text" id="form-name" class="form-control" name="username" placeholder="John Fish" required=""> </div> <div class="form-group"> <label class="form-control-label">Email </label> <input value="'+res.email+'" id="form-email" type="email" class="form-control" name="email" placeholder="email@email.com" required=""> </div> <div class="form-group"> <label class="form-control-label">Phone Number </label> <input value="'+res.phoneNumber+'" id="form-phone" type="text"  class="form-control" name="birthday" placeholder="Must Begin With 00966" required="" /> </div> <div class="form-group"> <button id="submitfirst" type="submit" class="btn btn-primary" id="validateButton1">Submit Edits</button> </div>');
+        
+             
+
+              $("#right").append('<div class="panel is-collapse"> <div class="panel-heading"> <h3 class="panel-title">Assign User Brands</h3> <div class="panel-actions panel-actions-keep"> <a class="panel-action icon wb-plus" data-toggle="panel-collapse" aria-hidden="true"></a> </div> </div> <div class="panel-body"> <div class="row"> <div class=" col-lg-6 table-responsive"> <table style="text-align: center;" class="table table-hover"> <thead> <tr> <th colspan="2" style="font-size: large;">Linked Brands</th> </tr> <tr> <th>Brand</th> <th>Remove</th> </tr> </thead> <tbody id="linkedbrands"> </tbody> </table> </div> <div class=" col-lg-6 table-responsive"> <table style="text-align: center;" class="table table-hover"> <thead> <tr> <th colspan="2" style="font-size: large;">Not Linked Brands</th> </tr> <tr> <th>Add</th> <th>Brand</th> </tr> </thead> <tbody id="unlinkedbrands"> </tbody> </table> </div> </div> </div> </div>');
+
+              $.ajax({
+                url:"http://localhost:53586/SystemAdmin/GetUserLinkedBrands/"+profileId,
+                success:function(res){
+                  $.each(res,function(){
+                    $("#linkedbrands").append('<tr> <td>'+this.brandName+'</td> <td> <button class="btn btn-danger deletebrandfromuser">Delete<i class="icon wb-arrow-right" aria-hidden="true"></i></button> <div style="display: none;">'+this.id+'</div> </td> </tr>');
+                  })
+                }
+              })
+
+
+              $.ajax({
+                url:"http://localhost:53586/SystemAdmin/GetUserUnlinkedBrands/"+profileId,
+                success:function(res){
+                  $.each(res,function(){
+                    $("#unlinkedbrands").append('<tr><td><button class="btn btn-success addbrandtouser"><i class="icon wb-arrow-left" aria-hidden="true"></i> Add To User</button> <div style="display: none;">'+this.id+'</div> </td> <td>'+this.brandName+'</td> </tr>');
+                  })
+                }
+              })
+
+                break;
+
+
+                case "Medical Representative":
+                $("#usersettingform").append(' <div class="form-group"> <label class="form-control-label">Full Name </label> <input value="'+res.fullName+'" type="text" id="form-name" class="form-control" name="username" placeholder="Full Name" required=""> </div> <div class="form-group"> <label class="form-control-label">Email </label> <input value="'+res.email+'" id="form-email" type="email" class="form-control" name="email" placeholder="email@email.com" required=""> </div> <div class="form-group"> <label class="form-control-label">Phone Number </label> <input value="'+res.phoneNumber+'" id="form-phone" type="text" class="form-control" name="birthday" placeholder="Must Begin With 00966" required="" /> </div> <div class="form-group"> <button type="submit" class="btn btn-primary" id="submitmedical">Submit Edits</button> </div> </div>');
+               
+              
+              $("#manager").removeClass('d-none');
+              $("#manager").append(res.managerName)
+           
+             
+              $("#right").append('<div class="panel is-collapse"> <div class="panel-heading"> <h3 class="panel-title">Assign User Accounts</h3> <div class="panel-actions panel-actions-keep"> <a class="panel-action icon wb-plus" data-toggle="panel-collapse" aria-hidden="true"></a> </div> </div> <div class="panel-body"> <div class="row"> <div class=" col-lg-6 table-responsive"> <table id="assignedaccountssearchtable" style="text-align: center;" class="table table-hover"> <thead><tr><th colspan="2"><input type="button" class="btn btn-success" id="expmedicalacc" value="Export"></th></tr> <tr><th colspan="2"><input type="text" class="form-control" id="assignedaccountssearch" placeholder="search"></th></tr><tr><th colspan="2" style="font-size: large;">Linked Accounts</th></tr> <tr> <th class="text-right">Account</th> <th class="text-left">Remove</th> </tr> </thead> <tbody id="linkedaccounts"> </tbody><tfoot><tr><td colspan="2"><input type="button" class="btn btn-danger" id="deleteaccountfromuser" value="Remove"><td><tr></tfoot> </table> </div> <div class=" col-lg-6 table-responsive"> <table id="medicalnotlinkedaccounts" style="text-align: center;" class="table table-hover"> <thead> <tr><th colspan="3" style="font-size: large;">Not Linked Accounts</th></tr><tr><th colspan="2"><input type="text" class="form-control" id="notassignedaccountssearch" placeholder="search"></th></tr> <tr> <th class="text-right">Add</th> <th class="sortMAD text-left">Account</th><th class="sortMAD">District</th> </tr> </thead> <tbody id="unlinkedaccounts"> </tbody><tfoot><tr><td colspan="2"><input type="button" id="addaccounts" class="btn btn-primary" Value="Add Accounts"></td></tr></tfoot></table></div></div></div></div>');
+              
+                $.ajax({
+                  url:"http://localhost:53586/SystemAdmin/GetUserLinkedAccounts/"+profileId,
+                  success:function(res){
+                    $.each(res,function(){
+                      $("#linkedaccounts").append('<tr><td class="text-right">'+this.accountName+'</td><td class="text-left"><input type="checkbox" value="'+this.id+'" class="removeaccountcheck"><div style="display: none;">'+this.id+'</div></td></tr>')
+                    })
+                  }
+                })
+ 
+                $.ajax({
+                  url:"http://localhost:53586/SystemAdmin/GetUserUnlinkedAccounts/"+profileId,
+                  success:function(res){
+                    $.each(res,function(){
+                      $("#unlinkedaccounts").append('<tr class="sortable"> <td class="text-right"> <input type="checkbox" value="'+this.id+'" class="accountcheck"> </td> <td class="text-left"> <label for="'+this.id+'" class="form-control-label">'+this.accountName+'</label> </td><td>'+this.districtName+'</td> </tr>');
+                    })
+                  }
+                })
+
+                  $("#right").append('<div class="panel is-collapse"> <div class="panel-heading"> <h3 class="panel-title">Assign User Contacts</h3> <div class="panel-actions panel-actions-keep"> <a class="panel-action icon wb-plus" data-toggle="panel-collapse" aria-hidden="true"></a> </div> </div> <div class="panel-body"> <div class="row"> <div class=" col-lg-6 table-responsive"> <table id="assignedcontactssearchtable" style="text-align: center;" class="table table-hover"> <thead><tr><th colspan="2"><input type="button" class="btn btn-success" id="expmedicalcon" value="Export"></th></tr><tr><th colspan="2"><input type="text" class="form-control" id="assignedcontactssearch" placeholder="search"></th></tr> <tr><th colspan="2" style="font-size: large;">Linked Contacts</th></tr> <tr> <th class="text-right">Contact</th> <th class="text-left">Remove</th> </tr> </thead> <tbody id="linkedcontacts"> </tbody><tfoot><tr><td colspan="2"><input type="button" class="btn btn-danger" id="deletecontactfromuser" value="Remove"><td><tr></tfoot> </table> </div> <div class=" col-lg-6 table-responsive"> <table id="notassignedcontactssearchtable" style="text-align: center;" class="table table-hover"> <thead> <tr><th colspan="4" style="font-size: large;">Not Linked Contacts</th></tr><tr><th colspan="4"><input type="text" class="form-control" id="notassignedcontactssearch" placeholder="search"></th></tr> <tr> <th class="text-right">Add</th> <th class="sortMAD text-left">Contact</th> <th class="sortMAD">District</th><th>Category</th></tr> </thead> <tbody id="unlinkedcontacts"> </tbody><tfoot><tr><td colspane="4" class="text-center"><input type="button" class="btn btn-primary" value="Add Contacts" id="addcontacts"></td></tr></tfoot></table></div></div></div></div>');
+                  
+                  $.ajax({
+                    url: "http://localhost:53586/SystemAdmin/GetUserLinkedContacts/" + profileId,
+                    success: function (res) {
+                      $.each(res, function () {
+                        $("#linkedcontacts").append('<tr><td class="text-right">' + this.contactName + '</td><td class="text-left"> <input type="checkbox" value="'+this.id+'" class="removecontactcheck"><div style="display: none;">' + this.id + '</div></td></tr>');
+                      })
+                    }
+                  })
+
+
+                  $.ajax({
+                    url: "http://localhost:53586/SystemAdmin/GetUserUnlinkedContacts/" + profileId,
+                    success: function (res) {
+                      $.each(res, function () {
+                        $("#unlinkedcontacts").append('<tr class="sortable"> <td class="text-right"> <input type="checkbox" value="'+this.id+'" class="contactcheck"> </td> <td class="text-left"> <label for="'+this.id+'" class="form-control-label">'+this.contactName+'</label> </td><td>'+this.districtName+'</td><td><select class="category form-control"><option value="0">Category</option></select></td> </tr>');
+                      })
+                    }
+                  }).then(function(){
+                    $.ajax({
+                      url: "http://localhost:53586/Category/GetAllCategories/",
+                    success:function(ress){
+                      $.each(ress,function(){
+                        $(".category").append('<option value="'+this.id+'">'+this.categoryName+'</option>')
+                      })
+                    }
+                    })
+                  })
+
+
+                  $("#right").append('<div class="panel is-collapse"> <div class="panel-heading"> <h3 class="panel-title">User Linked Brands</h3> <div class="panel-actions panel-actions-keep"> <a class="panel-action icon wb-plus" data-toggle="panel-collapse" aria-hidden="true"></a> </div> </div> <div class="panel-body"> <div class="row"> <div class=" col-lg-6 table-responsive"> <table style="text-align: center;" class="table table-hover"> <thead> <tr> <th colspan="2" style="font-size: large; color: green;">Linked Brands</th> </tr> <tr> <th>Brand</th> </tr> </thead> <tbody id="linkedbrands"> </tbody> </table> </div> <div class=" col-lg-6 table-responsive"> <table style="text-align: center;" class="table table-hover"> <thead> <tr> <th colspan="2" style="font-size: large; color: red;">Not Linked Brands</th> </tr> <tr> <th>Brand</th> </tr> </thead> <tbody id="unlinkedbrands"> </tbody> </table> </div> </div> </div> </div>');
+
+                  $.ajax({
+                    url:"http://localhost:53586/SystemAdmin/GetUserLinkedBrands/"+profileId,
+                    success:function(res){
+                      $.each(res,function(){
+                        $("#linkedbrands").append('<tr><td>'+this.brandName+'</td></tr>');
+                      })
+                    }
+                  })
+
+                  $.ajax({
+                    url:"http://localhost:53586/SystemAdmin/GetUserUnlinkedBrands/"+profileId,
+                    success:function(res){
+                      $.each(res,function(){
+                        $("#unlinkedbrands").append('<tr><td>'+this.brandName+'</td></tr>');
+                      })
+                    }
+                  })
+              break;
+
+
+                case "Sales Representative":
+                $("#usersettingform").append('<div class="form-group"> <label class="form-control-label">Full Name </label> <input value="'+res.fullName+'" type="text" id="form-name" class="form-control"  name="username" placeholder="John Fish" required=""> </div> <div class="form-group"> <label class="form-control-label">Email</label> <input value="'+res.email+'" id="form-email" type="email" class="form-control" name="email" placeholder="email@email.com" required=""> </div> <div class="form-group"> <label class="form-control-label">Phone Number </label> <input value="'+res.phoneNumber+'" id="form-phone" type="text" class="form-control" name="birthday" placeholder="Must Begin With 00966" required="" /> </div> <div class="form-group"> <button type="submit" class="btn btn-primary" id="submitsales">Submit Edits</button> </div> </div>');
+
+                $("#manager").removeClass('d-none');
+                $("#manager").append(res.managerName);
+
+                //$("#right").append('<div class="panel is-collapse"> <div class="panel-heading"> <h3 class="panel-title">Assign User Accounts</h3> <div class="panel-actions panel-actions-keep"> <a class="panel-action icon wb-plus" data-toggle="panel-collapse" aria-hidden="true"></a> </div> </div> <div class="panel-body"> <div class="row"> <div class=" col-lg-6 table-responsive"> <table style="text-align: center;" class="table table-hover"> <thead><tr><th colspan="2"><input type="button" class="btn btn-success" id="expmedicalacc" value="Export"></th></tr> <tr><th colspan="2" style="font-size: large;">Linked Accounts</th></tr> <tr> <th class="text-right">Account</th> <th class="text-left">Remove</th> </tr> </thead> <tbody id="linkedaccounts"> </tbody><tfoot><tr><td colspan="2"><input type="button" class="btn btn-danger" id="deleteaccountfromuser" value="Remove"><td><tr></tfoot> </table> </div> <div class=" col-lg-6 table-responsive"> <table style="text-align: center;" class="table table-hover"> <thead> <tr><th colspan="3" style="font-size: large;">Not Linked Accounts</th></tr> <tr> <th class="text-right">Add</th> <th  class="sortMAD text-left">Account</th><th class="sortMAD">District</th> </tr> </thead> <tbody id="unlinkedaccounts"> </tbody><tfoot><tr><td colspan="2"><input type="button" id="addaccounts" class="btn btn-primary" Value="Add Accounts"></td></tr></tfoot></table></div></div></div></div>');
+                $("#right").append('<div class="panel is-collapse"> <div class="panel-heading"> <h3 class="panel-title">Assign User Accounts</h3> <div class="panel-actions panel-actions-keep"> <a class="panel-action icon wb-plus" data-toggle="panel-collapse" aria-hidden="true"></a> </div> </div> <div class="panel-body"> <div class="row"> <div class=" col-lg-6 table-responsive"> <table id="assignedaccountssearchtable" style="text-align: center;" class="table table-hover"> <thead><tr><th colspan="2"><input type="button" class="btn btn-success" id="expmedicalacc" value="Export"></th></tr> <tr><th colspan="2"><input type="text" class="form-control" id="assignedaccountssearch" placeholder="search"></th></tr><tr><th colspan="2" style="font-size: large;">Linked Accounts</th></tr> <tr> <th class="text-right">Account</th> <th class="text-left">Remove</th> </tr> </thead> <tbody id="linkedaccounts"> </tbody><tfoot><tr><td colspan="2"><input type="button" class="btn btn-danger" id="deleteaccountfromuser" value="Remove"><td><tr></tfoot> </table> </div> <div class=" col-lg-6 table-responsive"> <table id="medicalnotlinkedaccounts" style="text-align: center;" class="table table-hover"> <thead> <tr><th colspan="3" style="font-size: large;">Not Linked Accounts</th></tr> <tr><th colspan="2"><input type="text" class="form-control" id="notassignedaccountssearch" placeholder="search"></th></tr> <tr> <th class="text-right">Add</th> <th  class="sortMAD text-left">Account</th><th class="sortMAD">District</th> </tr> </thead> <tbody id="unlinkedaccounts"> </tbody><tfoot><tr><td colspan="2"><input type="button" id="addaccounts" class="btn btn-primary" Value="Add Accounts"></td></tr></tfoot></table></div></div></div></div>');
+               $.ajax({
+                 url:"http://localhost:53586/SystemAdmin/GetUserLinkedAccounts/"+profileId,
+                 success:function(res){
+                   $.each(res,function(){
+                     $("#linkedaccounts").append('<tr><td class="text-right">'+this.accountName+'</td><td class="text-left"> <input type="checkbox" value="'+this.id+'" class="removeaccountcheck"><div style="display: none;">'+this.id+'</div></td></tr>')
+                   })
+                 }
+               })
+
+               $.ajax({
+                 url:"http://localhost:53586/SystemAdmin/GetUserUnlinkedAccounts/"+profileId,
+                 success:function(res){
+                   $.each(res,function(){
+                     $("#unlinkedaccounts").append('<tr class="sortable"> <td class="text-right"> <input type="checkbox" value="'+this.id+'" class="accountcheck"> </td> <td class="text-left"> <label for="'+this.id+'" class="form-control-label">'+this.accountName+'</label> </td><td>'+this.districtName+'</td> </tr>');
+                   })
+                 }
+               })
+               
+                break;
+                
+              }
+
+         
+            }
+          })
+
+
+
+
+           //Submit System Admin
+           $("#usersettingform").on('click','#submitsystem',function(e){
+            e.preventDefault();
+
+            var obj = 
+            {"Id":profileId,
+            "FullName":$("#form-name").val(),
+            "Email":$("#form-email").val(),
+            "PhoneNumber":$("#form-phone").val()
+            };
+
+            $.ajax({
+              type: "POST",
+              contentType: "application/json",
+              url: "http://localhost:53586/users/EditUser",
+              data: JSON.stringify(obj),
+              success: function (res) {
+                
+                if ( res == true )
+                {
+                  alert("User Setting Updated Successfully !");
+                  window.location.reload();
+                }
+                else{
+                  alert("Error !");
+                }
+
+              }
+
+
+            })
+           })
+
+
+           //Submit Top Line Manager
+           $("#usersettingform").on('click','#submittop',function(e){
+            e.preventDefault();
+
+            var obj = 
+            {"Id":profileId,
+            "FullName":$("#form-name").val(),
+            "Email":$("#form-email").val(),
+            "PhoneNumber":$("#form-phone").val()};
+
+              $.ajax({
+              type: "POST",
+              contentType: "application/json",
+              url: "http://localhost:53586/users/EditUser",
+              data: JSON.stringify(obj),
+              success: function (res) {
+                
+                if ( res == true )
+                {
+                  alert("User Setting Updated Successfully !");
+                  window.location.reload();
+                }
+                else{
+                  alert("Error !");
+                }
+
+              }
+
+
+            })
+           })
+
+
+
+          //Submit First Line Manager
+          $("#usersettingform").on('click', '#submitfirst', function (e) {
+            e.preventDefault();
+
+      
+
+
+            var obj =
+            {
+              "Id": profileId,
+              "FullName": $("#form-name").val(),
+              "Email": $("#form-email").val(),
+              "PhoneNumber": $("#form-phone").val(),
+              "CityId": $("#form-city").children("option:selected").val()
+            };
+
+            $.ajax({
+              type: "POST",
+              contentType: "application/json",
+              url: "http://localhost:53586/users/EditUser",
+              data: JSON.stringify(obj),
+              success: function (res) {
+
+                if (res == true) {
+                  alert("User Setting Updated Successfully !");
+                  window.location.reload();
+                }
+                else {
+                  alert("Error !");
+                }
+
+              }
+
+
+            })
+          })
+
+
+
+
+          //Submit Medical Representative
+          $("#usersettingform").on('click', '#submitmedical', function (e) {
+            e.preventDefault();
+
+
+
+
+            var obj =
+            {
+              "Id": profileId,
+              "FullName": $("#form-name").val(),
+              "Email": $("#form-email").val(),
+              "PhoneNumber": $("#form-phone").val(),
+              "CityId": $("#form-city").children("option:selected").val(),
+              "extendidentityuserid": $("#form-manager").children("option:selected").val()
+            };
+
+            $.ajax({
+              type: "POST",
+              contentType: "application/json",
+              url: "http://localhost:53586/users/EditUser",
+              data: JSON.stringify(obj),
+              success: function (res) {
+
+                if (res == true) {
+                  alert("User Setting Updated Successfully !");
+                  window.location.reload();
+                }
+                else {
+                  alert("Error !");
+                }
+
+              }
+
+
+            })
+          })
+
+
+
+          //Submit Medical Representative
+          $("#usersettingform").on('click', '#submitsales', function (e) {
+            e.preventDefault();
+
+
+            var obj =
+            {
+              "Id": profileId,
+              "FullName": $("#form-name").val(),
+              "Email": $("#form-email").val(),
+              "PhoneNumber": $("#form-phone").val(),
+              "CityId": $("#form-city").children("option:selected").val(),
+              "extendidentityuserid": $("#form-manager").children("option:selected").val()
+            };
+
+            $.ajax({
+              type: "POST",
+              contentType: "application/json",
+              url: "http://localhost:53586/users/EditUser",
+              data: JSON.stringify(obj),
+              success: function (res) {
+
+                if (res == true) {
+                  alert("User Setting Updated Successfully !");
+                  window.location.reload();
+                }
+                else {
+                  alert("Error !");
+                }
+
+              }
+
+
+            })
+          })
+
+          
+          $("#right").on('click','#deleteaccountfromuser',function(){
+
+            var AccountsIds = [];
+            $.each($(".removeaccountcheck:checked"),function(){
+              
+              AccountsIds.push($(this).val())
+            })
+           
+            var obj = {"userId":profileId,"AccountsIds":AccountsIds}
+
+            $.ajax({
+              type:"Post",
+              url:"http://localhost:53586/SystemAdmin/UnlinkUserWithAccount",
+              contentType: "application/json",
+              data: JSON.stringify(obj),
+              success:function(res){
+
+                if (res == true) {
+                  alert("The Accounts was Unlinked successfully !");
+                window.location.reload();
+                }
+
+                else{
+                  alert("Error !");
+                  window.location.reload();
+                }
+
+            
+              }
+            })
+
+
+          })
+
+
+          $("#right").on('click','#addaccounts',function(){
+            
+            var AccountsIds = [];
+            $.each($(".accountcheck:checked"),function(){
+              
+              AccountsIds.push($(this).val())
+            })
+
+            var obj = {"userId":profileId,"AccountsIds":AccountsIds}
+
+            $.ajax({
+              type:"Post",
+              url:"http://localhost:53586/SystemAdmin/LinkUserWithAccount",
+              contentType: "application/json",
+              data: JSON.stringify(obj),
+              success:function(res){
+
+                if (res == true) {
+                  alert("The Accounts was linked successfully !");
+                window.location.reload();
+                }
+
+                else{
+                  alert("Error !");
+                  window.location.reload();
+                }
+
+            
+              }
+            })
+
+
+          })
+
+
+
+          $("#right").on('click', '#deletecontactfromuser', function () {
+
+            var ContactsIds = [];
+            $.each($(".removecontactcheck:checked"),function(){
+              var contactid = $(this).val();
+           
+              var obj = {"ContactId":contactid,"CategoryId":0}
+          
+              ContactsIds.push(obj);
+            })
+
+            var obj = {"UserId":profileId,"ContactsIds":ContactsIds};
+
+
+            $.ajax({
+              type:"Post",
+              url:"http://localhost:53586/SystemAdmin/UnlinkUserWithContact/",
+              contentType: "application/json",
+              data: JSON.stringify(obj),
+              success:function(res){
+                if (res == true) {
+                  alert("The Contact was linked successfully !");
+                window.location.reload();
+                }
+
+                else{
+                  alert("Error !");
+                  window.location.reload();
+                }            
+              }
+            })
+
+
+          })
+
+          $("#right").on('click','#addcontacts',function(){
+            
+            var ContactsIds = [];
+            $.each($(".contactcheck:checked"),function(){
+              var contactid = $(this).val();
+              var categoryid = $(this).parent().next().next().next().children().children('option:selected').val();
+              var obj = {"ContactId":contactid,"CategoryId":categoryid}
+          
+              ContactsIds.push(obj);
+            })
+
+            var obj = {"UserId":profileId,"ContactsIds":ContactsIds};
+
+
+            $.ajax({
+              type:"Post",
+              url:"http://localhost:53586/SystemAdmin/LinkUserWithContact/",
+              contentType: "application/json",
+              data: JSON.stringify(obj),
+              success:function(res){
+                if (res == true) {
+                  alert("The Contact was linked successfully !");
+                window.location.reload();
+                }
+
+                else{
+                  alert("Error !");
+                  window.location.reload();
+                }            
+              }
+            })
+          })
+
+
+          $("#right").on('click','.addbrandtouser',function(){
+            var addedbrandid = $(this).next().text();
+
+            $.ajax({
+              url:"http://localhost:53586/SystemAdmin/LinkUserWithBrand/"+profileId+"/"+addedbrandid,
+              success:function(res){
+                if (res == true) {
+                  alert("The Brand was linked successfully !");
+                window.location.reload();
+                }
+              }
+            })
+
+          })
+
+
+          $("#right").on('click','.deletebrandfromuser',function(){
+            var deletedbrandid = $(this).next().text();
+
+            $.ajax({
+              url:"http://localhost:53586/SystemAdmin/UnlinkUserWithBrand/"+profileId+"/"+deletedbrandid,
+              success:function(res){
+                if (res == true) {
+                  alert("The Brand was unlinked successfully !");
+                window.location.reload();
+                }
+              }
+            })
+
+          })
+
+
+          $("#card").on('click','#disable',function(e){
+            $.ajax({
+              url:"http://localhost:53586/SystemAdmin/DeactivateUser/"+profileId,
+              success:function(res){
+                $(".card-block").children('button').remove();
+                $(".card-block").append('<button id="enable" type="button" class="btn btn-success">Enable</button>')
+                
+              }
+            })
+          })
+          
+          $("#card").on('click','#enable',function(){
+            $.ajax({
+              url:"http://localhost:53586/SystemAdmin/ActivateUser/"+profileId,
+              success:function(res){
+                $(".card-block").children('button').remove();
+                $(".card-block").append('<button id="disable" type="button" class="btn btn-danger">Disable</button>')
+              }
+            })
+          })
+
+
+
+
+
+
+
+
+
+          function comparer(index) {
+            return function (a, b) {
+              var valA = getCellValue(a, index), valB = getCellValue(b, index)
+              return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB)
+            }
+          }
+          function getCellValue(row, index) { return $(row).children('td').eq(index).text() }
+
+
+          $('#right').on('click','.sortMAD',function(){
+            var table = $(this).parents('table').eq(0)
+            var rows = table.find('.sortable:gt(0)').toArray().sort(comparer($(this).index()))
+            this.asc = !this.asc
+            if (!this.asc) { rows = rows.reverse() }
+            for (var i = 0; i < rows.length; i++) { table.append(rows[i]) }
+          })
+
+
+          $("#right").on('click',"#expmedicalacc",function(){
+            window.open('http://localhost:53586/SystemAdmin/GetUserLinkedAccountsExcel/'+profileId)
+          })
+
+          $("#right").on('click',"#expmedicalcon",function(){
+            window.open('http://localhost:53586/SystemAdmin/GetUserLinkedContactsExcel/'+profileId)
+          })
+          
+
+
+
+          $("#right").on('keyup', '#assignedaccountssearch', function () {
+            var search = $("#assignedaccountssearch").val();
+            var filter, table, tr, td, i, txtValue;
+            filter = search.toUpperCase();
+            table = document.getElementById("assignedaccountssearchtable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[0];
+              if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }
+            }
+          })
+
+          $("#right").on('keyup', '#notassignedaccountssearch', function () {
+            var search = $("#notassignedaccountssearch").val();
+            var filter, table, tr, td, i, txtValue;
+            filter = search.toUpperCase();
+            table = document.getElementById("medicalnotlinkedaccounts");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[1];
+              if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }
+            }
+          })
+
+
+          //notassignedcontactssearch
+          //assignedcontactssearch
+
+
+                  $("#right").on('keyup', '#assignedcontactssearch', function () {
+            var search = $("#assignedcontactssearch").val();
+            var filter, table, tr, td, i, txtValue;
+            filter = search.toUpperCase();
+            table = document.getElementById("assignedcontactssearchtable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[0];
+              if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }
+            }
+          })
+
+
+          $("#right").on('keyup', '#notassignedcontactssearch', function () {
+            var search = $("#notassignedcontactssearch").val();
+            var filter, table, tr, td, i, txtValue;
+            filter = search.toUpperCase();
+            table = document.getElementById("notassignedcontactssearchtable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[1];
+              if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }
+            }
+          })
+
+
+        });
+      })(document, window, jQuery);
+    </script>
+  </body>
+</html>

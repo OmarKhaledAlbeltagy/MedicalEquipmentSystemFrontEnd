@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap admin template">
+    <meta name="author" content="">
+    
+    <title>System Admin Register</title>
+    
+    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="../assets/images/fav.ico">
+    
+    <!-- Stylesheets -->
+     <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../global/css/bootstrap-extend.min.css">
+    <link rel="stylesheet" href="../assets/css/site.min.css">
+    
+    <!-- Plugins -->
+    <link rel="stylesheet" href="../global/vendor/animsition/animsition.css">
+    <link rel="stylesheet" href="../global/vendor/asscrollable/asScrollable.css">
+    <link rel="stylesheet" href="../global/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="../global/vendor/intro-js/introjs.css">
+    <link rel="stylesheet" href="../global/vendor/slidepanel/slidePanel.css">
+    <link rel="stylesheet" href="../global/vendor/flag-icon-css/flag-icon.css">
+    <link rel="stylesheet" href="../assets/examples/css/pages/register-v3.css">
+    
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../global/fonts/web-icons/web-icons.min.css">
+    <link rel="stylesheet" href="../global/fonts/brand-icons/brand-icons.min.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+    <link rel="stylesheet" href="../global/fontawesome/css/all.min.css"/>
+    
+    <!--[if lt IE 9]>
+    <script src="global/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lt IE 10]>
+    <script src="global/vendor/media-match/media.match.min.js"></script>
+    <script src="global/vendor/respond/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Scripts -->
+    <script src="../global/vendor/breakpoints/breakpoints.js"></script>
+    <script>
+      Breakpoints();
+    </script>
+    
+<script type="module">
+   import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+   const el = document.createElement('pwa-update');
+   document.body.appendChild(el);
+</script>
+    
+
+  </head>
+  <body class="animsition page-register-v3 layout-full">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <!-- Page -->
+    <div class="page vertical-align text-center" data-animsition-in="fade-in" data-animsition-out="fade-out">>
+      <div class="page-content vertical-align-middle animation-slide-top animation-duration-1">
+        <div class="panel">
+          <div class="panel-body">
+            <a href="../SystemAdmin/Home.html"><i class="fas fa-arrow-left"></i>  Back To Dashboard</a>
+            <div class="brand">
+              <img class="brand-img" src="../assets//images/amelogo.png" width="200" height="150" alt="...">
+              <h2 class="brand-text font-size-18">System Admin Registeration</h2>
+            </div>
+            <form method="post" id="register">
+
+              <div class="form-group form-material floating" id="namediv" data-plugin="formMaterial">
+                <input type="text" class="form-control" id="name" required/>
+                <label class="floating-label" id="namelabel" >Full Name</label>
+              </div>
+
+              <div class="form-group form-material floating" id="phonedev" data-plugin="formMaterial">
+                <input type="tel" class="form-control" id="phone" required  value="00966"/>
+                <label class="floating-label" id="phonelabel">Phone Number</label>
+              </div>
+
+              <div class="form-group form-material floating" id="phoneconfirmdiv" data-plugin="formMaterial">
+                <input type="tel" class="form-control" id="phoneconfirm" required  value="00966"/>
+                <label class="floating-label" id="phoneconfirmlabel">Re-enter Phone Number</label>
+              </div>
+
+              <div id="emaildiv" class="form-group form-material floating" data-plugin="formMaterial">
+                <input type="email" class="form-control" id="email"  required/>
+                <label class="floating-label" id="emaillabel">Email</label>
+              </div>
+
+              <div id="emailconfirmdiv" class="form-group form-material floating" data-plugin="formMaterial">
+                <input type="email" class="form-control" id="emailconfirm" required/>
+                <label id="emailconfirmlabel" class="floating-label" >Re-enter Email</label>
+              </div>
+
+              <div id="passworddiv" class="form-group form-material floating" data-plugin="formMaterial">
+                <input type="password" class="form-control" id="password"  required/>
+                <label id="passwordlabel" class="floating-label" >Password</label>
+              </div>
+
+              <div id="passwordconfirmdiv" class="form-group form-material floating" data-plugin="formMaterial">
+                <input type="password" class="form-control" id="passwordconfirm" required/>
+                <label id="passwordconfirmlabel" class="floating-label">Re-enter Password</label>
+              </div> 
+                 <div id="passworddescription" class="form-group form-material" align="left" style="color: black;">
+                  Password Must Have Minimum 7 characters
+                </div>
+                <div align='center' id="load" class="d-none loader vertical-align-middle">
+                  <div class="loader-grill"></div>
+                </div>
+              <button type="submit" class="btn btn-primary btn-block btn-lg mt-40">Sign up</button>
+            </form>
+         
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- End Page -->
+
+
+    <!-- Core  -->
+    <script src="../global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+    <script src="../global/vendor/jquery/jquery.min.js"></script>
+    <script src="../global/vendor/popper-js/umd/popper.min.js"></script>
+    <script src="../global/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="../global/vendor/animsition/animsition.js"></script>
+    <script src="../global/vendor/mousewheel/jquery.mousewheel.js"></script>
+    <script src="../global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+    <script src="../global/vendor/asscrollable/jquery-asScrollable.js"></script>
+    <script src="../global/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+
+    <!-- Plugins -->
+    <script src="../global/vendor/switchery/switchery.js"></script>
+    <script src="../global/vendor/intro-js/intro.js"></script>
+    <script src="../global/vendor/screenfull/screenfull.js"></script>
+    <script src="../global/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="../global/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="../global/fontawesome/js/all.min.js"></script>
+    
+    <!-- Scripts -->
+    <script src="../global/js/Component.js"></script>
+    <script src="../global/js/Plugin.js"></script>
+    <script src="../global/js/Base.js"></script>
+    <script src="../global/js/Config.js"></script>
+    <script src="../global/fontawesome/js/all.min.js"></script>
+    <script src="../assets/js/Section/Menubar.js"></script>
+    <script src="../assets/js/Section/GridMenu.js"></script>
+    <script src="../assets/js/Section/Sidebar.js"></script>
+    <script src="../assets/js/Section/PageAside.js"></script>
+    <script src="../assets/js/Plugin/menu.js"></script>
+    
+    <script src="../global/js/config/colors.js"></script>
+    <script src="../assets/js/config/tour.js"></script>
+    <script>Config.set('assets', 'assets');</script>
+    
+    <!-- Page -->
+    <script src="../assets/js/Site.js"></script>
+    <script src="../global/js/Plugin/asscrollable.js"></script>
+    <script src="../global/js/Plugin/slidepanel.js"></script>
+    <script src="../global/js/Plugin/switchery.js"></script>
+    <script src="../global/js/Plugin/jquery-placeholder.js"></script>
+    <script src="../global/js/Plugin/material.js"></script>
+    <script>
+      (function(document, window, $){
+        'use strict';
+    
+        var Site = window.Site;
+        $(document).ready(function(){
+          Site.run();
+
+                    //start layout            
+                    if (localStorage.getItem("userrole") !== "System Admin") {
+              window.open("../notauth.html", "_self")
+                }
+
+             $("#FullName").append(localStorage.getItem("userfullname") + ' <span><i class="icon wb-chevron-down-mini" aria-hidden="true"></i></span>');
+
+             $(".logout").click(function (e) {
+               e.preventDefault();
+               $.ajax({
+                 url: "http://localhost:53586/users/LogOut",
+                 success: function (res) {
+                   if (res == true) {
+                     window.localStorage.removeItem("userfullname");
+                      window.localStorage.removeItem("useremail");
+                      window.localStorage.removeItem("userid");
+                      window.localStorage.removeItem("userrole");
+                     window.open("../index.html", "_self")
+                   }
+                   else {
+                     window.open("../error.html", "_self")
+                   }
+                 }
+               })
+             })
+             //end layout
+          
+          //name check
+          $("#name").focusout(function(){
+            var name = $("#name").val();
+            $("#namelabel").removeAttr("style");
+            $("#namewrong").remove();
+            $("#nameright").remove();
+            if (!name) {
+              $("#namelabel").attr("style","color: #ff4c52;")
+              $("#namelabel").append('<span id="namewrong"><i style="color:red;" class="far fa-times-circle"></i></span')
+            }
+            else
+            {
+              $("#namelabel").append('<span id="nameright"><i class="far fa-check-circle" style="color:green;"></i></span>')
+            }
+          })
+       
+          //phonenumber check
+          $("#phone").focusout(function(){
+            var numbercheck = $("#phone").val()
+            var phonecon = $("#phoneconfirm").val();
+            $("#phonelabel").removeAttr("style");
+            $("#phonewrong").remove();
+            $("#phoneright").remove();
+            $("#phoneused").remove();
+            $("#phoneconfirmlabel").removeAttr("style");
+            $("#phoneconfirmwrong").remove();
+            $("#phonenotmatch").remove();
+            $("#phonematch").remove();
+            if (!numbercheck) {
+              $("#phonelabel").append('<span id="phonewrong"><i style="color:red;" class="far fa-times-circle"></i></span>');
+              $("#phonedev").append('<span id="phoneused" style="color:red;">Phone Number is required</span>')
+              return;
+            }
+            if (phonecon) {
+              if (numbercheck !== phonecon) {
+              $("#phoneconfirmlabel").attr("style","color: #ff4c52;");
+              $("#phoneconfirmlabel").append('<span id="phoneconfirmwrong"><i class="far fa-times-circle"></i></span>')
+              $('#phoneconfirmdiv').append('<span id="phonenotmatch" style="color:red;">phone numbers does not match</span>')
+              }
+              else
+              {
+              $("#phoneconfirmlabel").removeAttr("style");
+              $("#phoneconfirmlabel").append('<span id="phonematch"><i class="far fa-check-circle" style="color:green;"></i></span>');
+              }
+            }
+            $.ajax({
+              url:"http://localhost:53586/users/checkphone/"+numbercheck,
+              dataType:"json",            
+              success:function(res){
+               if (res == false) {
+                 $("#phonelabel").attr("style","color: #ff4c52;")
+                 $("#phonelabel").append('<span id="phonewrong"><i class="far fa-times-circle"></i></span>');
+                 $("#phonedev").append('<span id="phoneused" style="color:red;">This Phone Number is Used by another user</span>')
+               }
+               else
+               {
+                $("#phonelabel").removeAttr("style")
+                $("#phonelabel").append('<span id="phoneright"><i class="far fa-check-circle" style="color:green;"></i></span>');
+               }
+              }
+            })
+          })
+
+          //re-enter phone number check
+          $("#phoneconfirm").focusout(function(){
+            var phone = $("#phone").val();
+            var phoneconfirm = $("#phoneconfirm").val();
+            $("#phoneconfirmlabel").removeAttr("style");
+            $("#phonenotmatch").remove();
+            $("#phonematch").remove();
+            $("#phoneconfirmwrong").remove();
+
+            if (phone !== phoneconfirm) {
+              $("#phoneconfirmlabel").attr("style","color: #ff4c52;");
+              $("#phoneconfirmlabel").append('<span id="phoneconfirmwrong"><i class="far fa-times-circle"></i></span>')
+              $('#phoneconfirmdiv').append('<span id="phonenotmatch" style="color:red;">phone numbers does not match</span>')
+            }
+            else{
+              $("#phoneconfirmlabel").removeAttr("style");
+              $("#phoneconfirmlabel").append('<span id="phonematch"><i class="far fa-check-circle" style="color:green;"></i></span>');
+            }
+          })
+
+          //email check
+          $("#email").focusout(function(){
+            var emailcheck = $("#email").val();
+            var emailcon = $("#emailconfirm").val();
+            $("#emaillabel").removeAttr("style");
+            $("#emailwrong").remove();
+            $("#emailused").remove();
+            $("#emailright").remove();
+            $("#emailconfirmlabel").removeAttr();
+            $("#emailconfirmwrong").remove();
+            $("#emailnotmatch").remove();
+            $("#emailmatch").remove();
+            if (!emailcheck) {
+              $("#emaillabel").append('<span id="emailwrong"><i style="color:red;" class="far fa-times-circle"></i></span>');
+              $("#emaildiv").append('<span id="emailused" style="color:red;">Email Address is required</span>');
+              return;
+            }
+            if (emailcon) {
+              if (emailcheck !==emailcon) {
+              $("#emailconfirmlabel").attr("style","color: #ff4c52;");
+              $("#emailconfirmlabel").append('<span id="emailconfirmwrong"><i class="far fa-times-circle"></i></span>')
+              $('#emailconfirmdiv').append('<span id="emailnotmatch" style="color:red;">Emails does not match</span>')
+              }
+              else
+              {
+              $("#emailconfirmlabel").removeAttr("style");
+              $("#emailconfirmlabel").append('<span id="emailmatch"><i class="far fa-check-circle" style="color:green;"></i></span>');
+              }
+            }
+            $.ajax({
+              url: "http://localhost:53586/users/CheckEmail/" + emailcheck,
+              dataType: "json",
+              success: function (res) {
+             
+                if (res == true) {
+                  $("#emaillabel").removeAttr("style");
+                  $("#emaillabel").append('<span id="emailright"><i class="far fa-check-circle" style="color:green;"></i></span>');
+                }
+                else {
+                  $("#emaillabel").attr("style", "color: #ff4c52;");
+                  $("#emaillabel").append('<span id="emailwrong"><i class="far fa-times-circle"></i></span>');
+                  $("#emaildiv").append('<span id="emailused" style="color:red;">This Email Address is Used by another user</span>');
+                }
+              }
+            })
+
+          })
+
+          //re-enter email check
+          $("#emailconfirm").focusout(function(){
+            var email = $("#email").val();
+            var emailconfirm = $("#emailconfirm").val();
+            $("#emailconfirmlabel").removeAttr("style");
+            $("#emailnotmatch").remove();
+            $("#emailmatch").remove();
+            $("#emailconfirmwrong").remove();
+
+            if (email !== emailconfirm) {
+              $("#emailconfirmlabel").attr("style","color: #ff4c52;");
+              $("#emailconfirmlabel").append('<span id="emailconfirmwrong"><i class="far fa-times-circle"></i></span>')
+              $('#emailconfirmdiv').append('<span id="emailnotmatch" style="color:red;">Emails does not match</span>')
+            }
+            else{
+              $("#emailconfirmlabel").removeAttr("style");
+              $("#emailconfirmlabel").append('<span id="emailmatch"><i class="far fa-check-circle" style="color:green;"></i></span>');
+            }
+          })
+
+          //password check
+          $("#password").focusout(function(){
+          var password = $("#password").val();
+          $("#passwordlabel").removeAttr("style");
+          $("#passwordwrong").remove();
+          $('#passworddescription').removeAttr("style");
+          $("#passwordright").remove();
+          if (!password) {
+            $("#passwordlabel").attr("style","color: #ff4c52;");
+            $("#passwordlabel").append('<span id="passwordwrong"><i style="color:red;" class="far fa-times-circle"></i></span');
+           
+          }
+          else{
+            if (password.length < 7) {
+              $("#passwordlabel").attr("style","color: #ff4c52;");
+              $('#passworddescription').attr('style','color:red; border-style:solid; border-color:red;')
+            }
+            else{
+              $("#passwordlabel").append('<span id="passwordright"><i class="far fa-check-circle" style="color:green;"></i></span>');
+            }
+          }
+          })
+
+          //re-enter password check
+          $("#passwordconfirm").focusout(function(){
+            var password = $("#password").val();
+            var passwordconfirm = $("#passwordconfirm").val();
+            $("#passwordconfirmlabel").removeAttr("style");
+            $("#passwordconfirmwrong").remove();
+            $("#passwordconfirmnotmatch").remove();
+            $("#passwordconfirmmatch").remove();
+            if (password !== passwordconfirm) {
+              $("#passwordconfirmlabel").attr("style","color: #ff4c52;");
+              $("#passwordconfirmlabel").append('<span id="passwordconfirmwrong"><i class="far fa-times-circle"></i></span>')
+              $('#passwordconfirmdiv').append('<span id="passwordconfirmnotmatch" style="color:red;">Passwords does not match</span>')
+            }
+            else{
+              $("#passwordconfirmlabel").removeAttr("style");
+              $("#passwordconfirmlabel").append('<span id="passwordconfirmmatch"><i class="far fa-check-circle" style="color:green;"></i></span>');
+            }
+          })
+
+                 //ajax signup
+          $("#register").submit(function (e) {
+            e.preventDefault()
+            $("#submit").addClass("d-none");
+            $("#load").removeClass("d-none");
+            var regname = $("#name").val();
+            var regemail = $("#email").val();
+            var regphone = $("#phone").val();
+            var regpassword = $("#password").val()
+            var regis = {"FullName":regname,"email":regemail,"phoneNumber":regphone,"password":regpassword}
+            console.log(regis);
+            $.ajax({
+              type: "POST",
+              contentType: "application/json",
+              url: "http://localhost:53586/systemadmin/SystemAdminRegister/",
+              data: JSON.stringify(regis),
+              success: function (res) {
+                window.open('../check-your-email-email-confirmation.html?'+regemail,'_self')
+              },
+              error: function (err) {
+                console.log(err)
+                stop();
+                
+                alert(err);
+              }
+            })
+          })
+          
+
+
+
+        });
+
+      }
+     
+      )(document, window, jQuery);
+
+
+
+    </script>
+  </body>
+</html>

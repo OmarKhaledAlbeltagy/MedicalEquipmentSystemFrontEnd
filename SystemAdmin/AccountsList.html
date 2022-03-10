@@ -1,0 +1,1657 @@
+
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="bootstrap admin template">
+    <meta name="author" content="">
+    
+    <title>Accounts</title>
+    
+    <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="../assets/images/fav.ico">
+    
+    <!-- Stylesheets -->
+    <link rel="manifest" href="../manifest.json"/>
+     <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../global/css/bootstrap-extend.min.css">
+    <link rel="stylesheet" href="../assets/css/site.min.css">
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="../global/vendor/animsition/animsition.css">
+    <link rel="stylesheet" href="../global/vendor/asscrollable/asScrollable.css">
+    <link rel="stylesheet" href="../global/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="../global/vendor/intro-js/introjs.css">
+    <link rel="stylesheet" href="../global/vendor/slidepanel/slidePanel.css">
+    <link rel="stylesheet" href="../global/vendor/flag-icon-css/flag-icon.css">
+    <link rel="stylesheet" href="../global/vendor/nprogress/nprogress.css">
+    <link rel="stylesheet" href="../assets/examples/css/advanced/animation.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../global/fonts/web-icons/web-icons.min.css">
+    <link rel="stylesheet" href="../global/fonts/brand-icons/brand-icons.min.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+    <link rel="stylesheet" href="../global/fontawesome/css/all.min.css"/>
+    <!--[if lt IE 9]>
+    <script src="../global/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lt IE 10]>
+    <script src="../global/vendor/media-match/media.match.min.js"></script>
+    <script src="../global/vendor/respond/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Scripts -->
+    <script src="../global/vendor/breakpoints/breakpoints.js"></script>
+    <script>
+      Breakpoints();
+    </script>
+    
+<script type="module">
+   import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+   const el = document.createElement('pwa-update');
+   document.body.appendChild(el);
+</script>
+    
+
+  </head>
+  <body class="animsition">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
+    
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggler hamburger hamburger-close navbar-toggler-left hided"
+          data-toggle="menubar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="hamburger-bar"></span>
+        </button>
+        <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-collapse"
+          data-toggle="collapse">
+          <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+        </button>
+        <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+          <img class="navbar-brand-logo" src="../assets/images/amelogo.png" title="AME">
+          
+        </div>
+    
+      </div>
+    
+      <div class="navbar-container container-fluid">
+        <!-- Navbar Collapse -->
+        <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+          <!-- Navbar Toolbar -->
+          <ul class="nav navbar-toolbar">
+            <li class="nav-item hidden-float" id="toggleMenubar">
+              <a class="nav-link" data-toggle="menubar" href="#" role="button">
+                <i class="icon hamburger hamburger-arrow-left">
+                  <span class="sr-only">Toggle menubar</span>
+                  <span class="hamburger-bar"></span>
+                </i>
+              </a>
+            </li>
+            <li class="nav-item hidden-sm-down" id="toggleFullscreen">
+              <a class="nav-link icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
+                <span class="sr-only">Toggle fullscreen</span>
+              </a>
+            </li>
+      
+          </ul>
+          <!-- End Navbar Toolbar -->
+    
+          <!-- Navbar Toolbar Right -->
+          <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right" style="padding-right: 100px;">
+            <li class="nav-item dropdown">
+              <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button">
+                  <p id="FullName"></p>
+              </a>
+              <div class="dropdown-menu" role="menu">
+            
+                <a class="dropdown-item" href="../SystemAdmin/Setting.html" id="sett" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> Settings</a>
+                <div class="dropdown-divider" role="presentation"></div>
+                <a class="dropdown-item logout" href="" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
+              </div>
+            </li>
+          </ul>
+          <!-- End Navbar Toolbar Right -->
+        </div>
+        <!-- End Navbar Collapse -->
+    
+
+      </div>
+    </nav>  
+    
+    <div class="site-menubar">
+      <div class="site-menubar-body">
+        <div>
+          <div>
+            <ul class="site-menu" data-plugin="menu">
+              <li class="site-menu-category">Menu</li>
+              <li class="dropdown site-menu-item">
+                <a data-toggle="dropdown" data-dropdown-toggle="false" href="../SystemAdmin/Home.html">
+                  <i class="site-menu-icon wb-layout" aria-hidden="true"></i>
+                  <span class="site-menu-title">Dashboard</span>
+    
+                </a>
+              </li>
+    
+              <li class="dropdown site-menu-item has-sub">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-user-friends site-menu-icon wb-layout"></i>
+    
+                  <span class="site-menu-title">Users</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/user-list.html">
+                              <span class="site-menu-title">Manage Users</span>
+                            </a>
+                          </li>
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/SystemAdminRegister.html">
+                              <span class="site-menu-title">Create System Admin</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/TopLineManagerRegister.html">
+                              <span class="site-menu-title">Create Top Manager</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/FirstLineManagerRegister.html">
+                              <span class="site-menu-title">Create First Line Manager</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/MedicalRegister.html">
+                              <span class="site-menu-title">Create Medical Representative</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/SalesRegister.html">
+                              <span class="site-menu-title">Create Sales Representative</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+    
+    
+              <li class="dropdown site-menu-item has-sub">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-exclamation site-menu-icon"></i>
+    
+                  <span class="site-menu-title">General</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/Brands.html">
+                              <span class="site-menu-title">Brands & Products</span>
+                            </a>
+                          </li>
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/Cities.html">
+                              <span class="site-menu-title">Cities & Districts</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/LayOut.html">
+                              <span class="site-menu-title">Layout</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+    
+    
+              <li class="dropdown site-menu-item has-sub active">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-hospital site-menu-icon" aria-hidden="true"></i>
+    
+                  <span class="site-menu-title">Accounts</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+    
+                          <li class="site-menu-item active">
+                            <a class="animsition-link" href="../SystemAdmin/AccountsList.html">
+                              <span class="site-menu-title">Accounts Management</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/AccountsTypes.html">
+                              <span class="site-menu-title">Accounts Types</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+    
+              <li class="dropdown site-menu-item has-sub">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-user-md site-menu-icon" aria-hidden="true"></i>
+    
+                  <span class="site-menu-title">Contacts</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/ContactsList.html">
+                              <span class="site-menu-title">Contacts Management</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/ContactsTypes.html">
+                              <span class="site-menu-title">Contacts Types</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/SalesAids.html">
+                              <span class="site-menu-title">Sales Aids</span>
+                            </a>
+                          </li>
+    
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+    
+              <li class="dropdown site-menu-item has-sub">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-file site-menu-icon" aria-hidden="true"></i>
+    
+                  <span class="site-menu-title">Reports</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/Visits.html">
+                              <span class="site-menu-title">Visits Report</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/Kpis.html">
+                              <span class="site-menu-title">KPIs Report</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/CollectionReport.html">
+                              <span class="site-menu-title">Collection Report</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/BalanceReport.html">
+                              <span class="site-menu-title">Balance Report</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/WorkingDaysReport.html">
+                              <span class="site-menu-title">Working Days Report</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown site-menu-item has-sub">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-question site-menu-icon" aria-hidden="true"></i>
+    
+                  <span class="site-menu-title">Requests</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+    
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/CategoryRequests.html">
+                              <span class="site-menu-title">Category Change Requests</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/VisitsDeletingRequests.html">
+                              <span class="site-menu-title">Visits Deleting Requests</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+    
+              <li class="dropdown site-menu-item has-sub">
+                <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
+                  <i class="fas fa-cogs site-menu-icon" aria-hidden="true"></i>
+    
+                  <span class="site-menu-title">Options</span>
+                  <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <div class="site-menu-scroll-wrap is-list">
+                    <div>
+                      <div>
+                        <ul class="site-menu-sub site-menu-normal-list">
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/SetWorkingDays.html">
+                              <span class="site-menu-title">Set Working Days</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/WorkingDays.html">
+                              <span class="site-menu-title">Edit Working Days</span>
+                            </a>
+                          </li>
+                          <li class="site-menu-item">
+                            <a class="animsition-link" href="../SystemAdmin/KpisSetting.html">
+                              <span class="site-menu-title">Properties Setting</span>
+                            </a>
+                          </li>
+    
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown site-menu-item">
+                <a data-toggle="dropdown" data-dropdown-toggle="false" href="../SystemAdmin/MakeTimeOffTerritory.html">
+                  <i class="site-menu-icon wb-layout" aria-hidden="true"></i>
+                  <span class="site-menu-title">Create Time Off Territory</span>
+                </a>
+              </li>
+            </ul>
+            </li>
+    
+          </div>
+    
+        </div>
+      </div>
+    </div>
+
+    <!-- Page -->
+    
+   
+
+    <div class="page" id="page">
+      <div class="page-content">
+
+        <!-- Modal -->
+        <div class="modal fade example-modal-lg" aria-hidden="true" aria-labelledby="exampleOptionalLarge"
+        role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-simple modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="exampleOptionalLarge">Sales Visits</h4>
+            </div>
+            <div class="modal-body">
+              <div class="example table-responsive col-lg-12">
+                <table style="text-align: center;" class="table table-hover table-bordered">
+                  <thead>
+                    <tr><th colspan="5" id="accname"></th></tr>
+                    <tr>   
+                      <th>Representative</th>
+                      <th>Visit Date</th>
+                      <th>Visit Time</th>
+                      <th>Submitting Date</th>
+                      <th>Submitting Time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="salesresult">
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Modal -->
+
+
+      
+      
+        <!-- Modal -->
+        <div class="modal fade example-modal-lg" id="medicalvisitss" aria-hidden="true" aria-labelledby="exampleOptionalLarge"
+        role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-simple modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="exampleOptionalLarge">Medical Visits</h4>
+            </div>
+            <div class="modal-body">
+              <div class="example table-responsive col-lg-12">
+                <table style="text-align: center;" class="table table-hover table-bordered">
+                  <thead>
+                    <tr><th colspan="5" id="accnamemedical"></th></tr>
+                    <tr>     
+                      <th>Representative</th>
+                      <th>Visit Date</th>
+                      <th>Visit Time</th>
+                      <th>Submitting Date</th>
+                      <th>Submitting Time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="medicalresult">
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Modal -->
+
+      
+        <div class="panel d-none" id="accountdetails">
+          <div class="panel-heading">
+            <h2 class="panel-title">Account Details</h2>
+            <div class="panel-actions panel-actions-keep">
+              <a class="panel-action icon wb-close" id="closeaccountdetails" aria-hidden="true"></a>
+            </div>
+          </div>
+          <div class="panel-body" id="accountdetailsbody">
+            <!--ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss-->
+            <div class="example table-responsive col-lg-12">
+              <table style="text-align: center;" class="table table-hover table-bordered">
+                <thead>
+                  <tr><th colspan="5">General Info</th></tr>
+                  <tr>
+                    
+                    <th>Account Name</th>
+                    <th>Account Type</th>
+                    <th>Purchase Type</th>
+                    <th>Category</th>
+                    <th>Number Of Doctors</th>
+                  </tr>
+                </thead>
+                <tbody id="generalaccountdetails">
+
+                </tbody>
+              </table>
+            </div>
+            <hr style="border-color: black;">
+            <div class="example table-responsive col-lg-12">
+              <table style="text-align: center;" class="table table-hover table-bordered">
+                <thead>
+                  <tr><th colspan="3">Location Info</th></tr>
+                  <tr>
+                    
+                    <th>City</th>
+                    <th>District</th>
+                    <th>Address</th>
+                  </tr>
+                </thead>
+                <tbody id="locationaccountdetails">
+
+                </tbody>
+              </table>
+            </div>
+            <hr style="border-color: black;">
+            <div class="example table-responsive col-lg-12">
+              <table style="text-align: center;" class="table table-hover table-bordered">
+                <thead>
+                  <tr><th colspan="2">Contact Info</th></tr>
+                  <tr>
+                    
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                  </tr>
+                </thead>
+                <tbody id="contactaccountdetails">
+
+                </tbody>
+              </table>
+            </div>
+            <hr style="border-color: black;">
+            <div class="example table-responsive col-lg-12">
+              <table style="text-align: center;" class="table table-hover table-bordered">
+                <thead>
+                  <tr><th colspan="3">Best Time for visit</th></tr>
+                  <tr>
+                    
+                    <th>from</th>
+                    <th>to</th>
+                  </tr>
+                </thead>
+                <tbody id="timeaccountdetails">
+
+                </tbody>
+              </table>
+            </div>
+            <hr style="border-color: black;">
+            <div class="row">
+              <div class="example table-responsive col-lg-4">
+                <table id="firstaccountdetails" style="text-align: center;" class="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>First Line Managers</th>
+                    </tr>
+                  </thead>
+                </table>
+                <tbody id="firstaccountdetails">
+
+                </tbody>
+              </div>
+
+              <div class="example table-responsive col-lg-4">
+                <table id="medicalaccountdetails" style="text-align: center;" class="table table-hover table-bordered">
+                  <thead>
+                    <tr>              
+                      <th>Medical Representatives</th>
+                    </tr>
+                  </thead>
+                  <tbody id="medicalaccountdetails">
+
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="example table-responsive col-lg-4">
+                <table style="text-align: center;" class="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Sales Representatives</th>
+                    </tr>
+                  </thead>
+                  <tbody id="salesaccountdetails">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <hr style="border-color: black;">
+            <div class="row">
+              <div class="example table-responsive col-lg-6">
+                <table style="text-align: center;" class="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Medical Representatives Visits Count</th>
+                    </tr>
+                  </thead>
+                  <tbody id="medicalcountaccountdetails">
+
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="example table-responsive col-lg-6">
+                <table style="text-align: center;" class="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Sales Representatives Visits Count</th>
+                    </tr>
+                  </thead>
+                  <tbody id="salescountaccountdetails">
+
+                  </tbody>
+                </table>
+              </div>
+
+
+            </div>
+            <hr style="border-color: black;">
+            <div class="row">
+              <div class="example table-responsive col-lg-6">
+                <table style="text-align: center;" class="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Relationship Note</th>
+                    </tr>
+                  </thead>
+                  <tbody id="relationaccountdetails">
+
+                  </tbody>
+                </table>
+                </div>
+
+                <div class="example table-responsive col-lg-6">
+                  <table style="text-align: center;" class="table table-hover table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Payment Note</th>
+                      </tr>
+                    </thead>
+                    <tbody id="paymentaccountdetails">
+                      
+                    </tbody>
+                  </table>
+                  </div>
+            </div>
+            <div class="row">
+              <div class="example table-responsive col-lg-12">
+                <table style="text-align: center;" class="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Contacts</th>
+                    </tr>
+                  </thead>
+                  <tbody id="contactsaccountdetails">
+                    
+                  </tbody>
+                </table>
+                </div>
+            </div>
+            <div align="center">
+        <input id="print" type="button" value="Go To Print Screen" class="btn btn-primary">
+      </div>    
+      </div>
+        </div>
+
+
+
+
+        <div class="panel d-none" id="newaccount">
+          <div class="panel-heading">
+            <h2 class="panel-title">New Account</h2>
+            <div class="panel-actions panel-actions-keep">
+              <a class="panel-action icon wb-close" id="closenewaccount" aria-hidden="true"></a>
+            </div>
+          </div>
+          <div class="panel-body" id="newaccountbody">
+            
+
+
+          </div>
+        </div>
+
+
+
+        
+        <div class="panel">
+          <div class="panel-body">
+         
+            <div class="example table-responsive">
+
+              <table class="table table-borderd">
+                <thead>
+                  <tr>
+                    <th>
+                      <select id="searchtype" class="form-control">
+                      <option value="0">All Types</option>
+                    </select>
+                  </th>
+                  <th><select class="form-control" id="searchcity"><option value="0">Choose city</option></select></th>
+                  <th><select class="form-control" id="searchdistrict"><option value="0">All Districts</option></select></th>
+                  <th><input id="seachh" type="button" class="btn btn-primary" value="search"></th>
+                  </tr>
+                </thead>
+              </table>
+
+
+              <table class="table table-borderless text-center">
+                <thead>
+                  <tr><th><input placeholder="search By Name" type="text" class="form-control" id="searchvalue"></th><th><input type="button" value="Search" id="searchword" class="btn btn-primary"></th></tr>
+                </thead>
+              </table>
+
+
+              <table id="accountstable" style="text-align: center;" class="table table-hover">
+                <colgroup>
+                <col span="1" style="width: 4%;">
+                <col span="1" style="width: 13%;">
+                <col span="1" style="width: 13%;">
+                <col span="1" style="width: 13%;">
+                <col span="1" style="width: 13%;">
+                <col span="1" style="width: 13%;">
+                <col span="1" style="width: 13%;">
+                <col span="1" style="width: 13%;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th colspan="9"><input type="button" id="addnewaccount" value="Add New Account" class="btn btn-success"></th>
+                  </tr>
+                  <tr><th colspan="9">  
+                    <div id="search" class="input-search input-search-dark">
+                      <input type="text" class="form-control" id="inputSearch" name="search" placeholder="Search">
+                    </div></th>
+                  </tr>
+                  <tr><th>#</th><th>Name</th><th>District</th><th>Call</th><th>Send E-mail</th><th>More Details</th><th>Manage</th><th>Delete</th><th>Set Credit Limit</th></tr>
+                </thead>
+               
+                <tbody id="accounts">
+        
+                </tbody>
+
+              </table>
+
+
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Plan Visit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="mod">
+                <div class="table-responsive">
+                <table class="table table-borderless text-center">
+                  <input type="hidden" id="planned">
+                  <thead>
+                    <tr>
+                      <th>
+                        <input type="text" class="d-none" id="accountidd">
+                        <label class="form-control-label">Credit Limit: </label><input type="text" id="limit" class="form-control">
+                      </th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="save">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="clic" class="btn btn-primary d-none" ></button>
+
+
+      </div>
+    </div>
+
+    <!-- End Page -->
+
+
+
+    <!-- Core  -->
+    <script src="../global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+    <script src="../global/vendor/jquery/jquery.js"></script>
+    <script src="../global/vendor/popper-js/umd/popper.min.js"></script>
+    <script src="../global/vendor/bootstrap/bootstrap.js"></script>
+    <script src="../global/vendor/animsition/animsition.js"></script>
+    <script src="../global/vendor/mousewheel/jquery.mousewheel.js"></script>
+    <script src="../global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+    <script src="../global/vendor/asscrollable/jquery-asScrollable.js"></script>
+    <script src="../global/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+    
+    <!-- Plugins -->
+    <script src="../global/vendor/switchery/switchery.js"></script>
+    <script src="../global/vendor/intro-js/intro.js"></script>
+    <script src="../global/vendor/screenfull/screenfull.js"></script>
+    <script src="../global/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="../global/vendor/jquery-appear/jquery.appear.js"></script>
+    <script src="../global/vendor/nprogress/nprogress.js"></script>
+     
+    <!-- Scripts -->
+    <script src="../global/js/Component.js"></script>
+    <script src="../global/js/Plugin.js"></script>
+    <script src="../global/js/Base.js"></script>
+    <script src="../global/js/Config.js"></script>
+    
+    <script src="../assets/js/Section/Menubar.js"></script>
+    <script src="../assets/js/Section/GridMenu.js"></script>
+    <script src="../assets/js/Section/Sidebar.js"></script>
+    <script src="../assets/js/Section/PageAside.js"></script>
+    <script src="../assets/js/Plugin/menu.js"></script>
+    <script src="../global/fontawesome/js/all.min.js"></script>
+    <script src="../global/js/config/colors.js"></script>
+    <script src="../assets/js/config/tour.js"></script>
+    <script>Config.set('assets', '../assets');</script>
+    <!-- Page -->
+    <script src="../assets/js/Site.js"></script>
+    <script src="../global/js/Plugin/asscrollable.js"></script>
+    <script src="../global/js/Plugin/slidepanel.js"></script>
+    <script src="../global/js/Plugin/switchery.js"></script>
+    
+    <script>
+      (function(document, window, $){
+        'use strict';
+    
+        var Site = window.Site;
+        $(document).ready(function(){
+          Site.run();
+
+                      //start layout            
+                      if (localStorage.getItem("userrole") !== "System Admin") {
+              window.open("../notauth.html", "_self")
+                }
+
+             $("#FullName").append(localStorage.getItem("userfullname") + ' <span><i class="icon wb-chevron-down-mini" aria-hidden="true"></i></span>');
+
+             $(".logout").click(function (e) {
+               e.preventDefault();
+               $.ajax({
+                 url: "http://localhost:53586/users/LogOut",
+                 success: function (res) {
+                   if (res == true) {
+                     window.localStorage.removeItem("userfullname");
+                      window.localStorage.removeItem("useremail");
+                      window.localStorage.removeItem("userid");
+                      window.localStorage.removeItem("userrole");
+                     window.open("../index.html", "_self")
+                   }
+                   else {
+                     window.open("../error.html", "_self")
+                   }
+                 }
+               })
+             })
+             //end layout
+
+
+
+             $("#searchword").click(function(){
+               var value = $("#searchvalue").val();
+
+               $("#searchvalue").removeAttr('style');
+               $("#accounts").children('tr').remove();
+
+               if (value == "" || value == null) {
+                $("#searchvalue").css("border-color","#dc3545");
+                return;
+               }
+
+               var obj = {"Word":value};
+               
+               $.ajax({
+                 type:"Post",
+                 contentType:"application/json",
+                 url:"http://localhost:53586/account/SearchAccount/",
+                 data: JSON.stringify(obj),
+                success:function(res){
+                  var i = 1;
+              $.each(res,function(){
+                var phone;
+                var email;
+
+                if (this.phoneNumber == "" || this.phoneNumber == null) {
+                  phone = "Phone Number not found";
+                }
+                else{
+                  phone = '<a class="text-action" href="tel:'+this.phoneNumber+'"><i class="fas fa-mobile-alt fa-2x" aria-hidden="true"></i></a>'
+                }
+
+                if (this.email != "" || this.email != null) {
+                  
+                  email = '<a class="text-action" href="mailto:'+this.email+'"><i class="fas fa-envelope-open-text fa-2x" aria-hidden="true"></i></a>'
+                }
+                else
+                {
+                  email = "Email Not Found";
+                }
+                $("#accounts").append('<tr> <td>'+i+'</td> <td>'+this.accountName+'</td><td>'+this.districtName+'</td><td>'+phone+'</td> <td>'+email+'</td> <td><a href="#accountdetails"><span style="cursor:pointer"><i class="fas fa-list fa-2x details"></i></span></a></td> <td><button class="btn btn-primary manage"><i class="fas fa-edit"></i> Manage</button><div style="display:none;">'+this.id+'</div></td><td><button class="btn btn-danger delete"><i class="fas fa-trash-alt"></i> Delete</button></td><td><input type="button" class="btn btn-primary credit" value="Set Credit Limit" data-toggle="modal" data-target="#exampleModal"></td> </tr>');
+                i++
+              })
+                }
+               })
+             })
+
+
+             $("#accounts").on('click','.credit',function(){
+              var accountid = $(this).parent().prev().prev().children('div').text();
+              $("#accountidd").val(accountid);
+              $.ajax({
+                url:"http://localhost:53586/account/GetAccountCreditLimit/"+accountid,
+                success:function(res){
+                  $("#limit").val(res);
+                }
+              })
+             })
+
+             $("#save").click(function(){
+               var accountid = $("#accountidd").val();
+               var limit = $("#limit").val();
+               $.ajax({
+                url:"http://localhost:53586/account/EditAccountCreditLimit/"+accountid+"/"+limit,
+                success:function(res){
+                  if (res == true) {
+                    $('#exampleModal').modal('toggle');
+                  }
+                }
+               })
+             })
+
+
+
+
+
+             $("#accounts").on('click', '.delete', function () {
+            var accountid = $(this).parent().prev().children('div').text();
+
+            var accountname = $(this).parent().prev().prev().prev().prev().prev().text();
+           
+            if (confirm("Are you Sure You want to delete "+accountname+"?")) {
+            
+              $.ajax({
+                url:"http://localhost:53586/account/DeleteAccount/"+accountid,
+                success:function(res){
+                  if (res == true) {
+                    window.location.reload();
+                  }
+                }
+              })
+
+            } else {
+              return;
+            }
+
+          })
+
+          $("#newaccountbody").on('submit', '#newaccountform', function (e) {
+            e.preventDefault();
+
+            var accountname = $("#newaccountname").val();
+            var accounttypeid = $("#newaccounttype").children('option:selected').val();
+            var accountcity = $("#newaccountcity").children('option:selected').val();
+            var accountdistrictid = $("#newaccountdistrict").children('option:selected').val();
+            var accountaddress = $("#newaccountaddress").val();
+            var accountphone = $("#newaccountphone").val();
+            var accountemail = $("#newaccountemail").val();
+            var accountpurchasetype = $("#newaccountpurchasetype").children('option:selected').val();
+            var accountcategory = $("#newaccountcategory").children('option:selected').val();
+            var accountdoctors = $("#newaccountdoctors").val();
+            var accounttimefrom = $("#newaccountbesttimefrom").val();
+            var accounttimeto = $("#newaccountbesttimeto").val();
+            var accountrelationshipnote = $("#newaccountrelationshipnote").val();
+            var accountpaymentnote = $("#newaccountpaymentnote").val();
+
+            $(".errmsg").remove();
+            $("#newaccounttype").removeAttr('style');
+            $("#newaccountcity").removeAttr('style');
+            $("#newaccountdistrict").removeAttr('style');
+            $("#newaccountpurchasetype").removeAttr('style');
+            $("#newaccountcategory").removeAttr('style');
+
+            if(accounttypeid == 0)
+            {
+              $("#newaccounttype").css("border-color","#dc3545");
+              $("#submitgroup").before('<div class="errmsg" style="color:red;">- Account Type is required</div>');
+            }
+
+            if (accountpurchasetype == 0) {
+              $("#newaccountpurchasetype").css("border-color","#dc3545");
+              $("#submitgroup").before('<div class="errmsg" style="color:red;">- Account Purchase type is required</div>');
+            }
+
+            if (accountcategory == 0) {
+              $("#newaccountcategory").css("border-color","#dc3545");
+              $("#submitgroup").before('<div class="errmsg" style="color:red;">- Account Category is required</div>');
+            }
+
+            if(accountcity == 0){
+              $("#newaccountcity").css("border-color","#dc3545");
+              $("#submitgroup").before('<div class="errmsg" style="color:red;">- Account City is required</div>');
+            }
+
+            if (accountphone == "" || accountphone == "00966") {
+              $("#newaccountphone").css("border-color","#dc3545");
+              $("#submitgroup").before('<div class="errmsg" style="color:red;">- Account Phone Number is required</div>');
+            }
+
+            if(accountdistrictid == 0){
+              $("#newaccountdistrict").css("border-color","#dc3545");
+              $("#submitgroup").before('<div class="errmsg" style="color:red;">- Account District is required</div>');
+             return;
+            }
+
+            if (accountdoctors == 0 || accountdoctors == "") {
+              accountdoctors = null;
+            }
+
+            if (accounttimefrom == "") {
+              accounttimefrom = null;
+            }
+
+            if (accounttimeto == "") {
+              accounttimeto = null;
+            }
+
+     
+            if (accountaddress == "") {
+              accountaddress = null;
+            }
+
+            if (accountemail == "") {
+              accountemail = null;
+            }
+
+            var obj = {"AccountName":accountname,"AccountTypeId":accounttypeid,"Address":accountaddress,"PhoneNumber":accountphone,"DistrictId":accountdistrictid,"Email":accountemail,"NumberOfDoctors":accountdoctors,"PurchaseTypeId":accountpurchasetype,"PaymentNote":accountpaymentnote,"BestTimeFrom":accounttimefrom,"BestTimeTo":accounttimeto,"RelationshipNote":accountrelationshipnote,"CategoryId":accountcategory}
+          
+
+            $("#newaccountform").remove();
+            $("#newaccountbody").append('<div id="loading" class="example-wrap"><div class="example-loading example-well h-150 vertical-align text-center"> <div class="loader vertical-align-middle loader-tadpole"></div> </div> </div>')
+
+            $.ajax({
+              type: "POST",
+              contentType: "application/json",
+              url: "http://localhost:53586/Account/AddAccount",
+              data: JSON.stringify(obj),
+              success:function(res){
+                if (res==true) {
+                  $("#loading").remove();
+                $("#newaccount").addClass('d-none');
+                alert('The account has been added successfully')
+                window.location.reload();
+                }
+                else{
+                  $("#loading").remove();
+                  $("#newaccountbody").addClass('d-none');
+                  alert('An error has been occured..\n Please try add the account again or contact your developer');
+                }
+              }
+            })
+          })
+
+          $.ajax({
+              url:"http://localhost:53586/Account/GetAllAccountTypes",
+            success:function(res){
+              $.each(res,function(){
+                $("#searchtype").append('<option value="'+this.id+'">'+this.accountTypeName+'</option>')
+              })
+            }
+            })
+
+
+           
+            
+            $.ajax({
+            url:"http://localhost:53586/City/GetAllCities",
+            success:function(res){
+              $.each(res,function(){
+                $("#searchcity").append('<option value="'+this.id+'">'+this.cityName+'</option>')
+              
+              })
+            }
+          })
+            
+          $("#searchcity").change(function(){
+            var cityid = $(this).children('option:selected').val();
+            $("#searchdistrict").children('option').remove();
+            $.ajax({
+                url:"http://localhost:53586/City/GetDistrictsByCityId/"+cityid,
+                success:function(res){
+                  $("#searchdistrict").append('<option class="deletedistrict" value="0">All Districts</option>')
+                  $.each(res,function(){
+
+                    $("#searchdistrict").append('<option class="deletedistrict" value="'+this.id+'">'+this.districtName+'</option>')
+                  })
+                }
+              })
+          })
+          
+          $("#seachh").click(function(){
+            if ($("#searchcity").children('option:selected').val() == 0) {
+              
+              $("#searchcity").css("border-color","#dc3545");         
+            return;
+          }
+          var AccountTypeId = $("#searchtype").children('option:selected').val();
+          var DistrictId = $("#searchdistrict").children('option:selected').val();
+          var CityId = $("#searchcity").children('option:selected').val();
+          $("#accounts").children('tr').remove();         
+
+       
+            var obj = {"AccountTypeId":AccountTypeId,"CityId":CityId,"DistrictId":DistrictId}
+          $.ajax({
+              type: "Post",
+              contentType: "application/json",
+              url: "http://localhost:53586/Account/GetAllAccountsfiltered",
+              data: JSON.stringify(obj),
+              success:function(res){
+                var i = 1;
+              $.each(res,function(){
+                var phone;
+                var email;
+
+                if (this.phoneNumber == "" || this.phoneNumber == null) {
+                  phone = "Phone Number not found";
+                }
+                else{
+                  phone = '<a class="text-action" href="tel:'+this.phoneNumber+'"><i class="fas fa-mobile-alt fa-2x" aria-hidden="true"></i></a>'
+                }
+
+                if (this.email != "" || this.email != null) {
+                  
+                  email = '<a class="text-action" href="mailto:'+this.email+'"><i class="fas fa-envelope-open-text fa-2x" aria-hidden="true"></i></a>'
+                }
+                else
+                {
+                  email = "Email Not Found";
+                }
+                $("#accounts").append('<tr> <td>'+i+'</td> <td>'+this.accountName+'</td><td>'+this.districtName+'</td><td>'+phone+'</td> <td>'+email+'</td> <td><a href="#accountdetails"><span style="cursor:pointer"><i class="fas fa-list fa-2x details"></i></span></a></td> <td><button class="btn btn-primary manage"><i class="fas fa-edit"></i> Manage</button><div style="display:none;">'+this.id+'</div></td><td><button class="btn btn-danger delete"><i class="fas fa-trash-alt"></i> Delete</button></td><input type="button" class="btn btn-primary credit" value="Set Credit Limit" data-toggle="modal" data-target="#exampleModal"></td> </tr>');
+                i++
+              })
+              }
+            })
+       
+          })
+
+
+    
+          $("#addnewaccount").click(function(){
+            $("#newaccount").removeClass('d-none');
+            $("#newaccountform").remove();
+            $("#newaccountbody").append(' <form autocomplete="off" id="newaccountform"> <h4>General Info</h4> <div class="row"> <div class="form-group col-md-6"> <label class="form-control-label" for="newaccountname">Account Name <span style="color: red;">*</span></label> <input required type="text" class="form-control" id="newaccountname" name="inputFirstName" placeholder="Account Name" autocomplete="off" /> </div> <div class="form-group col-md-6"> <label class="form-control-label" for="newaccounttype">Choose Account Type <span style="color: red;">*</span></label> <select required id="newaccounttype" class="form-control"> <option value="0">Account Type</option> </select> </div> </div> <div class="row"> <div class="form-group col-md-6"> <label class="form-control-label" for="newaccountpurchasetype">Purchase Type <span style="color: red;">*</span></label> <select id="newaccountpurchasetype" class="form-control"> <option value="0">Choose Purchase Type</option> </select> </div> <div class="form-group col-md-6"> <label class="form-control-label" for="newaccountcategory">Category <span style="color: red;">*</span></label> <select id="newaccountcategory" class="form-control"> <option value="0">Choose Category</option> </select> </div> </div> <hr> <h4>Location Info</h4> <div class="row"> <div class="form-group col-md-4"> <label class="form-control-label" for="newaccountcity">City <span style="color: red;">*</span></label> <select required id="newaccountcity" class="form-control"> <option value="0">Choose City</option> </select> </div> <div class="form-group col-md-4"> <label class="form-control-label" for="newaccountdistrict">District <span style="color: red;">*</span></label> <select required id="newaccountdistrict" class="form-control"> <option value="0">Choose District</option> </select> </div> <div class="form-group col-md-4"> <label class="form-control-label" for="newaccountaddress">Address</label> <input type="text" class="form-control" id="newaccountaddress" name="inputFirstName" placeholder="Address" autocomplete="off" /> </div> </div> <hr> <h4>Contact Info</h4> <div class="row"> <div class="form-group col-md-6"> <label class="form-control-label" for="newaccountphone">Phone Number <span style="color: red;">*</span></label> <input required type="tel" value="00966" class="form-control" id="newaccountphone" name="inputFirstName" placeholder="Phone Number" autocomplete="off" /> </div> <div class="form-group col-md-6"> <label class="form-control-label" for="newaccountemail">Email </label> <input type="email" class="form-control" id="newaccountemail" name="inputFirstName" placeholder="Email" autocomplete="off" /> </div> </div> <hr> <h4>Optional Info</h4> <div class="row"> <div class="form-group col-md-6"> <label class="form-control-label" for="newaccountdoctors">Number Of Doctors</label> <input type="number" class="form-control" id="newaccountdoctors" name="inputFirstName" placeholder="Number Of Doctors" autocomplete="off" /> </div> </div> <h5>Best Time For Visit</h5> <div class="row"> <div class="form-group col-md-6"> <label class="form-control-label" for="newaccountbesttimefrom">From</label> <input type="time" class="form-control" id="newaccountbesttimefrom" name="inputFirstName" placeholder="From" autocomplete="off" /> </div> <div class="form-group col-md-6"> <label class="form-control-label" for="newaccountbesttimeto">To</label> <input type="time" class="form-control" id="newaccountbesttimeto" name="inputFirstName" placeholder="To" autocomplete="off" /> </div> </div> <div class="row"> <div class="form-group col-md-6"> <label class="form-control-label" for="newaccountrelationshipnote">Relationship Note</label> <textarea class="form-control" placeholder="Relationship Note" id="newaccountrelationshipnote" cols="30" rows="5"></textarea> </div> <div class="form-group col-md-6"> <label class="form-control-label" for="newaccountpaymentnote">Payment Note</label> <textarea class="form-control" placeholder="Payment Note" id="newaccountpaymentnote" cols="30" rows="5"></textarea> </div> </div> <div class="form-group" id="submitgroup" align="center"> <button type="submit" class="btn btn-success">Submit</button> </div> </form>')
+            $("#accountdetails").addClass('d-none');
+            $.ajax({
+              url:"http://localhost:53586/Account/GetAllAccountTypes",
+            success:function(res){
+              $.each(res,function(){
+                $("#newaccounttype").append('<option value="'+this.id+'">'+this.accountTypeName+'</option>')
+               
+              })
+            }
+            })
+
+
+            $.ajax({
+            url:"http://localhost:53586/City/GetAllCities",
+            success:function(res){
+              $.each(res,function(){
+                $("#newaccountcity").append('<option value="'+this.id+'">'+this.cityName+'</option>')
+              
+              })
+            }
+          })
+
+          $.ajax({
+            url:"http://localhost:53586/PurchaseType/GetAllPurchaseTypes",
+            success:function(res){
+              $.each(res,function(){
+              $("#newaccountpurchasetype").append('<option value="'+this.id+'">'+this.purchaseTypeName+'</option>')
+            })
+            }
+          })
+
+
+          $.ajax({
+            url:"http://localhost:53586/Category/GetAllCategories",
+            success:function(res){
+              $.each(res,function(){
+                $("#newaccountcategory").append('<option value="'+this.id+'">'+this.categoryName+'</option>')
+              })
+            }
+          })
+
+
+          })
+
+
+
+          $("#newaccountbody").on('change','#newaccountcity',function(){
+            $(".deletedistrict").remove();
+            var cityid = $("#newaccountcity").children('option:selected').val();
+            if (cityid == 0) {
+              return
+            }
+
+             else{
+              $.ajax({
+                url:"http://localhost:53586/City/GetDistrictsByCityId/"+cityid,
+                success:function(res){
+                  $.each(res,function(){
+                    $("#newaccountdistrict").append('<option class="deletedistrict" value="'+this.id+'">'+this.districtName+'</option>')
+                  })
+                }
+              })
+            }
+          })
+
+
+      
+
+
+
+          $("#page").on('click','#closenewaccount',function(){
+            $("#newaccountform").remove();
+            $("#newaccount").addClass('d-none');
+          })
+          
+
+          $("#newaccountbody").on('keyup','#newaccountdoctors',function(){
+            if ($("#newaccountdoctors").val() > 250) {
+              alert('Number Of Doctors for each account must be 250 maximum')
+              $("#newaccountdoctors").focus()
+              $("#newaccountdoctors").val(250);
+          
+
+            }
+          });
+          
+      
+
+     
+
+          $.ajax({
+            url:"http://localhost:53586/Account/GetAllAccountTypes",
+            success:function(res){
+              $.each(res,function(){
+                $("#typefilter").append('<option value="'+this.id+'">'+this.accountTypeName+'</option>')
+              })
+            }
+          })
+
+
+          $.ajax({
+            url:"http://localhost:53586/City/GetAllCities",
+            success:function(res){
+              $.each(res,function(){
+                $("#cityfilter").append('<option value="'+this.id+'">'+this.cityName+'</option>')
+              })
+            }
+          })
+
+          $("#cityfilter").change(function(){
+            var cityid = $("#cityfilter option:selected").val();
+
+            var cityname = $("#cityfilter option:selected").text();
+            $(".delete").remove();
+            if (cityname == "City") {
+              cityname = "";
+         
+              $("#typefilter").removeClass('d-none');
+              $("#search").removeClass('d-none');
+            }
+            else{
+ 
+              $("#typefilter").addClass('d-none');
+              $("#search").addClass('d-none');
+            }
+
+          var filter, table, tr, td, i, txtValue;
+          filter = cityname.toUpperCase();
+          table = document.getElementById("accountstable");
+          tr = table.getElementsByTagName("tr");
+
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[3];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+
+
+          if (cityid != 0) {
+            $.ajax({
+            url:"http://localhost:53586/City/GetDistrictsByCityId/"+cityid,
+            success:function(res){
+              $("#districtfilter").children('.delete').remove();
+              $.each(res,function(){
+                $("#districtfilter").append('<option class="delete" value="'+this.id+'">'+this.districtName+'</option>')
+              })
+            }
+          })
+          }
+          
+          })
+
+
+          $("#typefilter").change(function(){
+            var typename = $("#typefilter option:selected").text();
+
+            if (typename == "Type") {
+              typename = "";
+              $("#cityfilter").removeClass('d-none');
+              $("#districtfilter").removeClass('d-none');
+              $("#search").removeClass('d-none');
+            }
+            else{
+              $("#cityfilter").addClass('d-none');
+              $("#districtfilter").addClass('d-none');
+              $("#search").addClass('d-none');
+            }
+
+          var filter, table, tr, td, i, txtValue;
+          filter = typename.toUpperCase();
+          table = document.getElementById("accountstable");
+          tr = table.getElementsByTagName("tr");
+
+          // Loop through all table rows, and hide those who don't match the search query
+          //filter1
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[2];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        })
+
+
+
+        $("#districtfilter").change(function(){
+            var districtname = $("#districtfilter option:selected").text();
+            if (districtname == "District") {
+              districtname = "";
+            }
+         
+          var filter, table, tr, td, i, txtValue;
+          filter = districtname.toUpperCase();
+          table = document.getElementById("accountstable");
+          tr = table.getElementsByTagName("tr");
+
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[4];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        })
+
+
+
+        $("#inputSearch").keyup(function(){
+
+          if ($("#inputSearch").val() != "")
+           {
+            $("#typefilter").addClass('d-none')
+            $("#cityfilter").addClass('d-none')
+            $("#districtfilter").addClass('d-none')
+         
+          }
+
+          else
+          {
+            $("#typefilter").removeClass('d-none')
+            $("#cityfilter").removeClass('d-none')
+            $("#districtfilter").removeClass('d-none')
+          }
+
+          var search = $("#inputSearch").val();        
+          var filter, table, tr, td, i, txtValue;
+          filter = search.toUpperCase();
+          table = document.getElementById("accountstable");
+          tr = table.getElementsByTagName("tr");
+
+          // Loop through all table rows, and hide those who don't match the search query
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+       
+        })
+
+
+
+
+
+        
+        function formatTimeShow(h_24) {
+            var h = h_24 % 12;
+            return (h < 10 ? '0' : '') + h;
+          }
+
+        var accountid;
+        $("#accounts").on('click','.details',function(){
+         
+          $("#newaccount").addClass('d-none');
+          $("#accountdetails").removeClass('d-none');
+          
+     
+          $(".d").remove();
+              
+          accountid = $(this).parent().parent().parent().next().children('div').text();
+
+          $.ajax({
+            url:"http://localhost:53586/Account/GetAccountById/"+accountid,
+            success:function(res){
+              if (res.numberOfDoctors == null) {
+                res.numberOfDoctors = "Not Set";
+              }
+              if (res.bestTimeFrom == null) {
+                res.bestTimeFrom = "Not Set";
+            
+              }
+              else{
+                var timefrom = res.bestTimeFrom.substring(11,16);
+                var h = timefrom.substring(0,2);
+                var m = timefrom.substring(3);
+                if (h>11) {
+                  var newh = formatTimeShow(h);
+                res.bestTimeFrom = newh+":"+m+" PM";
+                }
+               else{
+                 res.bestTimeFrom = timefrom+" AM";
+               }
+              }
+              if (res.bestTimeTo == null) {
+                res.bestTimeTo = "Not Set";
+              }
+              else{
+               var timeto = res.bestTimeTo.substring(11,16);
+                var h = timeto.substring(0,2);
+          
+                var m = timeto.substring(3);
+    
+                if (h>11) {
+                  var newh = formatTimeShow(h);
+                res.bestTimeTo = newh+":"+m+" PM";
+                }
+               else{
+                 res.bestTimeTo = timeto+" AM";
+               }
+              }
+
+              if (res.relationshipNote == null) {
+                res.relationshipNote = "Not Set";          
+              }
+              if (res.paymentNote == null) {
+                res.paymentNote = "Not Set";
+              }
+              if (res.firstLineNames.length === 0) {
+                res.firstLineNames = ["There is no first line manager assigned to this account"]
+              }
+              if (res.medicalsNames.length === 0) {
+                res.medicalsNames = ["There is no medical representatives assigned to this account"];
+              }
+              if (res.salesNames.length === 0) {
+                res.salesNames = ["There is no sales representatives assigned to this account"];
+              }
+    
+              
+              if (res.address == null) {
+                res.address = "Address Not Set"
+              }
+
+              if (res.email == null) {
+                res.email = "Email Not Set"
+              }
+
+              $("#generalaccountdetails").append('<tr class="d"><td id="thisaccname">'+res.accountName+'</td><td>'+res.accountTypeName+'</td><td>'+res.purchaseTypeName+'</td><td>'+res.categoryName+'</td><td>'+res.numberOfDoctors+'</td></tr>')
+              $("#locationaccountdetails").append('<tr class="d"><td>'+res.cityName+'</td><td>'+res.districtName+'</td><td>'+res.address+'</td></tr>')
+              $("#contactaccountdetails").append('<tr class="d"><td>'+res.phoneNumber+'</td><td>'+res.email+'</td></tr>')
+              $("#timeaccountdetails").append('<tr class="d"><td>'+res.bestTimeFrom+'</td><td>'+res.bestTimeTo+'</td></tr>');
+              $.each(res.firstLineNames,function(){
+                $("#firstaccountdetails").append('<tr class="d"><td>'+this+'</td></tr>')
+              })
+
+              $.each(res.medicalsNames,function(){
+                $("#medicalaccountdetails").append('<tr class="d"><td>'+this+'</td></tr>')
+              })
+
+              $.each(res.salesNames,function(){
+                $("#salesaccountdetails").append('<tr class="d"><td>'+this+'</td></tr>')
+              })
+              $.each(res.contactsNames,function(){
+                $("#contactsaccountdetails").append('<tr><td class="d">'+this+'</td></tr>')
+              })
+
+            
+                $("#medicalcountaccountdetails").append('<tr class="d"><td><input data-target="#medicalvisitss" data-toggle="modal" type="button" value="'+res.numberOfMedicalVisits+'" class="btn btn-primary medicalvisits"></td></tr>');
+           
+                
+           
+                $("#salescountaccountdetails").append('<tr class="d"><td><input data-target=".example-modal-lg" data-toggle="modal" type="button" value="'+res.numberOfSalesVisits+'" class="btn btn-primary salesvisits"></td></tr>');
+            
+
+              $("#relationaccountdetails").append('<tr class="d"><td>'+res.relationshipNote+'</td></tr>')
+
+              $("#paymentaccountdetails").append('<tr class="d"><td>'+res.paymentNote+'</td></tr>')
+
+            }
+          })
+
+        })
+        
+        $("#medicalcountaccountdetails").on('click','.medicalvisits',function(){
+          $("#medicalresult").children('tr').remove()
+          $.ajax({
+            url:"http://localhost:53586/SystemAdmin/GetAccountMedicalVisitByAccountId/"+accountid,
+            success:function(res){
+              var accname = $("#thisaccname").text();
+              $("#accnamemedical").html("<U>"+accname+"</U>")
+              $.each(res,function(){
+                $("#medicalresult").append('<tr><td>'+this.userName+'</td><td>'+this.visitDate+'</td><td>'+this.visitTime+'</td><td>'+this.submittingDate+'</td><td>'+this.submittingTime+'</td></tr>')
+              })
+            }
+          })
+        })
+
+        $("#salescountaccountdetails").on('click','.salesvisits',function(){
+          $("#salesresult").children('tr').remove()
+          $.ajax({
+            url:"http://localhost:53586/SystemAdmin/GetAccountSalesVisitByAccountId/"+accountid,
+            success:function(res){
+              var accname = $("#thisaccname").text();
+              $("#accname").html("<U>"+accname+"</U>")
+              $.each(res,function(){
+                $("#salesresult").append('<tr><td>'+this.userName+'</td><td>'+this.visitDate+'</td><td>'+this.visitTime+'</td><td>'+this.submittingDate+'</td><td>'+this.submittingTime+'</td></tr>')
+              })
+            }
+          })
+        })
+
+
+        /*      <div class="modal fade example-modal-lg" id="medicalvisitss" aria-hidden="true" aria-labelledby="exampleOptionalLarge"
+        role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-simple modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="exampleOptionalLarge">Medical Visits</h4>
+            </div>
+            <div class="modal-body">
+              <div class="example table-responsive col-lg-12">
+                <table style="text-align: center;" class="table table-hover table-bordered">
+                  <thead>
+                    <tr><th colspan="5" id="accnamemedical"></th></tr>
+                    <tr>     
+                      <th>Representative</th>
+                      <th>Visit Date</th>
+                      <th>Visit Time</th>
+                      <th>Submitting Date</th>
+                      <th>Submitting Time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="medicalresult">
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>*/
+        
+  
+        $("#closeaccountdetails").click(function(){
+          $("#accountdetails").addClass('d-none');
+        })
+
+
+        $("#print").click(function(){
+          window.open('../SystemAdmin/AccountDetailsPrint.html?'+accountid);
+        })
+
+
+        $("#accounts").on("click",".manage",function(){
+          accountid = $(this).next().text();
+          window.open('../SystemAdmin/AccountManagement.html?'+accountid);
+        })
+        
+          
+        });
+      })(document, window, jQuery);
+    </script>
+  </body>
+</html>
